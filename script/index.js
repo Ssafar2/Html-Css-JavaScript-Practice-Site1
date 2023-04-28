@@ -5,6 +5,9 @@ const docBody = document.body;
 
 
 
+
+
+
 menuUl.style.maxHeight = '0px'
 faBars.addEventListener('click', () => {
 
@@ -19,14 +22,16 @@ faBars.addEventListener('click', () => {
 })
 
 faSun.addEventListener('click', () => {
-    docBody.classList.toggle('lightMode')
-    
+    docBody.classList.toggle('lightMode');
+
     if (docBody.classList.contains('lightMode')) {
+        faSun.classList.replace('fa-sun', 'fa-moon')
     
-        faSun.classList.replace('fa-sun', 'fa-moon')     
     }
     else {
-        
-        faSun.classList.replace('fa-moon', 'fa-sun')  
+        faSun.classList.replace('fa-moon', 'fa-sun')
+     
     }
+
+
 })
