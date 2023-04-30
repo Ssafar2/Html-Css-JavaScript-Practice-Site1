@@ -44,14 +44,13 @@
         </div>
 
         <nav>
-            <a class="logo" href="#">$safar Pub</a>
+            <a class="logo" href="./index.html">$safar Pub</a>
             <i id="faBars" class="fa-solid fa-bars"></i>
             <ul class="menuUl">
-                <li><a href="#">Ana Səhifə</a></li>
-                <li><a href="#">Menyular</a></li>
-                <li><a href="#">Rezervasiya</a></li>
-                <li><a href="#">Haqqımızda</a></li>
-                <li><a href="#">Əlaqə</a></li>
+                <li><a href="./index.html">Ana Səhifə</a></li>
+                <li><a href="./pages/menu.html">Menyular</a></li>
+                <li><a href="./pages/about.html">Haqqımızda</a></li>
+                <li><a href="./pages/contact.html">Əlaqə</a></li>
             </ul>
         </nav>
 
@@ -62,8 +61,8 @@
             <h1>Dostlarınız ilə əylənmək üçün sizi <strong>$safar Pub`</strong>a dəvət edirik </h1>
             <h3>Şeflərimizin əlindən çıxan dadlı yemək və məzələr burada</h3>
 
-            <button class="order" type="button">Sifariş et</button>
-            <button class="rezerv" type="button">Rezervasiya</button>
+            <a href="#" class="order" type="button">Sifariş et</a>
+            <a href="./pages/menu.html" class="rezerv" type="button">Menyular</a>
         </div>
 
     </header>
@@ -134,7 +133,7 @@
                 <img class="menu-img" src="./image/hotdog1.jpg" alt="hotdog1">
                 <div class="menyus">
                     <h1>Menyular</h1>
-                    <button class="go-menu">Menyuya get</button>
+                    <a href="./pages/menu.html" class="go-menu">Menyuya get</a>
                 </div>
                 <button class="go-menu2" type="button">Menyuya get</button>
             </div>
@@ -214,11 +213,24 @@
         <div class="footer-logo">
             <h1>$safar Pub</h1>
             <div class="social-media">
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-tiktok"></i>
-                <i class="fa-brands fa-twitter"></i>
+
+              <a href="https://instagram.com/cv.hazirlaa?igshid=ZDdkNTZiNTM=" target="_blank">
+                <i id="instagram" class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/sahib-safarali-8b80a9255" target="_blank">
+                <i id="linkedin" class="fa-brands fa-linkedin"></i>
+              </a>
+
+              <a href="https://www.tiktok.com/@cv.hazirla?_t=8bvjoM8bnVZ&_r=1"  target="_blank">
+                <i id="tiktok" class="fa-brands fa-tiktok"></i>
+              </a>
+
+              <a href="https://twitter.com/Swyr222?t=h5ARsMSCcGZWZXqpuBWRHA&s=35" target="_blank">
+                <i id="twitter" class="fa-brands fa-twitter"></i>
+              </a>
             </div>
+
         </div>
 
         <div class="footer-contact">
@@ -252,14 +264,30 @@
             <h1>Abunə Ol</h1>
             <div class="ft-subscribe-line"></div>
             <div class="subscribe">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veniam voluptatem amet aliquam fugiat inventore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt veniam voluptatem amet aliquam
+                    fugiat inventore.</p>
             </div>
 
             <div class="ft-forms">
-                <input placeholder="Email Adresinizi Girin" type="text">
-                <button type="button">Abunə Ol</button>
+                <input id="subscribe-input" placeholder="Email Adresinizi Girin" type="email">
+                <button id="subscribe-button" type="button">Abunə Ol</button>
             </div>
         </div>
+
+        <div class="input-alert-warning">
+
+            <h4></h4>
+        </div>
+        <div class="input-alert-success">
+
+            <h4></h4>
+        </div>
+
+        <div class="input-alert-danger">
+
+            <h4></h4>
+        </div>
+
     </footer>
 
 
