@@ -71,7 +71,7 @@ const pizzaMenu = [
         title: 'White Pizza',
         priceDel: '18.99 ₼',
         content: '16.99 ₼',
-        image: '../image-menu/pizza1.jfif'
+        image: '../image-menu/pizza1.jpg'
     },
     {
         title: 'Supreme Pizza',

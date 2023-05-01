@@ -114,6 +114,10 @@ closeModal.onclick = () => {
     menuImgModule.style.display = 'none'
 }
 
+menuImgModule.ondblclick=()=>{
+    menuImgModule.style.display='none';
+}
+
 
 menuUl.style.maxHeight = '0px'
 faBars.onclick = () => {
