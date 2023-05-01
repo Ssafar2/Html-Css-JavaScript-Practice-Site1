@@ -377,7 +377,12 @@ nav ul li a {
 
 
 
-#menu-img-module {
+#menu-img-module,
+#menu-img-module2,
+#menu-img-module3,
+#menu-img-module4,
+#menu-img-module5,
+#menu-img-module6 {
     width: 100%;
     height: 100%;
     background-color: var(--rgbaColor);
@@ -394,8 +399,10 @@ nav ul li a {
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
-
 }
+
+
+
 
 
 @-webkit-keyframes zoom {
@@ -458,7 +465,7 @@ nav ul li a {
 #footer {
     width: 100%;
     height: auto;
-    padding:  80px 100px 150px 100px;
+    padding: 80px 100px 150px 100px;
     background-color: var(--bgColor);
     display: flex;
     align-items: center;
@@ -545,6 +552,7 @@ nav ul li a {
     font-size: 18px;
 }
 
+
 .footer-contact .ft-phone,
 .ft-email,
 .ft-location,
@@ -589,14 +597,14 @@ nav ul li a {
     width: 100%;
 }
 
-.ft-forms input{
-    
+.ft-forms input {
+
     outline: 0;
     padding: 10px;
     font-size: 16px;
 }
 
-.ft-forms button{
+.ft-forms button {
     border: 0;
     outline: 0;
     padding: 14px;
@@ -606,12 +614,11 @@ nav ul li a {
     transition: .5s;
 }
 
-.ft-forms button:hover{
+.ft-forms button:hover {
     transform: scale(1.05);
     transition: .3s;
     cursor: pointer;
 }
-
 
 
 .input-alert-warning {
@@ -621,7 +628,7 @@ nav ul li a {
     position: absolute;
     bottom: 10px;
     left: 20px;
-      display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     transform: translateX(-1000px);
@@ -709,51 +716,42 @@ nav ul li a {
     .headerUl,
     .header-info,
     nav,
-    .section-1,
-    .section-2,
-    .section-3,
-    .section-4
-   {
+    .section1-menu {
         padding: 0px 70px;
     }
 
-    #footer{
-        padding:  80px 70px 110px 70px;
+    #footer {
+        padding: 80px 70px 110px 70px;
     }
 }
 
 @media screen and (min-width:650px) and (max-width:880px) {
 
+
     .headerUl,
     .header-info,
     nav,
-    .section-1,
-    .section-2,
-    .section-3,
-    .section-4
-   {
+    .section1-menu {
         padding: 0px 40px;
     }
 
-    #footer{
-        padding:  80px 40px 80px 40px;
+    #footer {
+        padding: 80px 40px 110px 40px;
     }
 }
 
 @media screen and (max-width:649px) {
 
+
     .headerUl,
     .header-info,
     nav,
-    .section-1,
-    .section-2,
-    .section-3,
-    .section-4 {
+    .section1-menu {
         padding: 0px 10px;
     }
 
-    #footer{
-        padding:  70px 10px 70px 10px;
+    #footer {
+        padding: 80px 10px 110px 10px;
     }
 }
 
@@ -930,29 +928,131 @@ nav ul li a {
 
 
 
+@media screen and (max-width:526px) {
+
+    .drinks-header h1 {
+        font-size: 18px;
+    }
+
+    .drinks-header h3 {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width:455px) {
+
+    .drinks-header h1 {
+        font-size: 16px;
+    }
+
+    .drinks-header h3 {
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (min-width:630px) and (max-width:960px) {
+
+
+    .drinks-item {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        padding-bottom: 50px;
+    }
+
+    .drinks-item img {
+        flex-basis: 50%;
+        height: 250px;
+        object-fit: fill;
+        transition: .5s;
+    }
+
+
+    .menyus {
+        width: 70%;
+        height: 300px;
+        border: 2px solid var(--txtColor);
+        top: 33.5%;
+
+    }
+}
 
 
 
+@media screen and (min-width:200px) and (max-width:629px) {
+
+
+    .drinks-item {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        justify-content: center;
+        padding-bottom: 50px;
+        gap: 20px;
+    }
+
+
+    .drinks-item img {
+        flex-basis: 100%;
+        height: 250px;
+        object-fit: fill;
+        transition: .5s;
+    }
+
+
+    .menyus {
+        display: none;
+    }
+
+}
 
 
 
+@media screen and (min-width:350px) and (max-width:500px) {
+
+    .modal-content h1 {
+        font-size: 30px;
+    }
+
+    .modal-content p {
+        font-size: 17px;
+        text-align: justify;
+    }
+
+}
 
 
+@media screen and (min-width:200px) and (max-width:349px) {
 
+    .modal-content h1 {
+        font-size: 20px;
+        margin: 10px;
+    }
 
+    .modal-content p {
+        font-size: 13px;
+        text-align: justify;
+    }
 
-
-
-
-
-
+}
 
 
 
 
 
 @media screen and (min-width:730px) and (max-width:1211px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -962,21 +1062,22 @@ nav ul li a {
         flex-basis: 50%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 35px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 30px;
     }
-    
-    
+
+
+
 
     .footer-contact p {
         font-size: 18px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -984,9 +1085,9 @@ nav ul li a {
         display: flex;
         align-items: center;
     }
-    
-    
-    
+
+
+
     .footer-subscribe {
         align-items: center;
         color: var(--txtColor);
@@ -996,24 +1097,16 @@ nav ul li a {
         margin-top: 50px;
     }
 
-   
-    
+
     .footer-subscribe p {
         font-size: 18px;
     }
-    
-    
- 
-    
- 
-    
-  
-    
+
 }
 
 
 @media screen and (min-width:400px) and (max-width:729px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -1023,24 +1116,24 @@ nav ul li a {
         flex-basis: 100%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 35px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 30px;
     }
 
-    .footer-contact{
+    .footer-contact {
         margin-top: 50px;
     }
-    
+
 
     .footer-contact p {
         font-size: 18px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -1048,9 +1141,9 @@ nav ul li a {
         display: flex;
         align-items: center;
     }
-    
-    
-    
+
+
+
     .footer-subscribe {
         align-items: center;
         color: var(--txtColor);
@@ -1063,11 +1156,11 @@ nav ul li a {
     .footer-subscribe p {
         font-size: 18px;
     }
-     
+
 }
 
 @media screen and (min-width:260px) and (max-width:399px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -1077,24 +1170,24 @@ nav ul li a {
         flex-basis: 100%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 25px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 20px;
     }
 
-    .footer-contact{
+    .footer-contact {
         margin-top: 50px;
     }
-    
+
 
     .footer-contact p {
         font-size: 14px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -1104,11 +1197,11 @@ nav ul li a {
     }
 
 
-    .footer-logo h1{
+    .footer-logo h1 {
         font-size: 35px;
     }
-    
-    
+
+
     .footer-subscribe {
         align-items: center;
         color: var(--txtColor);
@@ -1122,19 +1215,19 @@ nav ul li a {
         font-size: 14px;
     }
 
-    .footer-subscribe h1{
+    .footer-subscribe h1 {
         font-size: 30px;
     }
 
-    .footer-contact h1{
+    .footer-contact h1 {
         font-size: 30px;
     }
-     
+
 }
 
 
 @media screen and (min-width:200px) and (max-width:259px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -1144,24 +1237,25 @@ nav ul li a {
         flex-basis: 100%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 20px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 15px;
     }
 
-    .footer-contact{
-        margin-top: 50px;
+    .footer-contact {
+        margin-top:
+            50px;
     }
-    
+
 
     .footer-contact p {
         font-size: 11px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -1171,11 +1265,11 @@ nav ul li a {
     }
 
 
-    .footer-logo h1{
+    .footer-logo h1 {
         font-size: 25px;
     }
-    
-    
+
+
     .footer-subscribe {
         margin-top: 50px;
     }
@@ -1184,12 +1278,12 @@ nav ul li a {
         font-size: 11px;
     }
 
-    .footer-subscribe h1{
+    .footer-subscribe h1 {
         font-size: 20px;
     }
 
-    .footer-contact h1{
+    .footer-contact h1 {
         font-size: 20px;
     }
-     
+
 }

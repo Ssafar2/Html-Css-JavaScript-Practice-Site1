@@ -1343,8 +1343,6 @@ nav ul li a {
 }
 
 
-
-
 @media screen and (min-width:630px) and (max-width:960px) {
 
 
@@ -1550,9 +1548,6 @@ nav ul li a {
 
 
 }
-
-
-
 
 
 @media screen and (min-width:350px) and (max-width:500px) {
@@ -1788,6 +1783,8 @@ nav ul li a {
 }
 
 
+
+
 @media screen and (min-width:730px) and (max-width:1211px) {
 
     .footer-logo,
@@ -1835,17 +1832,9 @@ nav ul li a {
     }
 
 
-
     .footer-subscribe p {
         font-size: 18px;
     }
-
-
-
-
-
-
-
 
 }
 
