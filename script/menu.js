@@ -69,42 +69,50 @@ subsButton.onclick = () => {
 const pizzaMenu = [
     {
         title: 'White Pizza',
-        content: 'Ləzzətli White Pizzalar burada',
+        priceDel: '18.99 ₼',
+        content: '16.99 ₼',
         image: '../image-menu/pizza1.jfif'
     },
     {
         title: 'Supreme Pizza',
-        content: 'Ləzzətli Supreme Pizzalar burada',
+        priceDel: '19.99 ₼',
+        content: '17.99 ₼',
         image: '../image-menu/pizza2.jpg'
     },
     {
         title: 'Margherita Pizza',
-        content: 'Ləzzətli Margherita Pizzalar burada',
+        priceDel: '22.99 ₼',
+        content: '18.99 ₼',
         image: '../image-menu/pizza3.jpg'
     },
     {
         title: 'Gennaro Pizza',
-        content: 'Ləzzətli Gennaro Pizzalar burada',
+        priceDel: '25.99 ₼',
+        content: '21.99 ₼',
         image: '../image-menu/pizza4.jpg'
     },
     {
         title: 'Pepperoni Pizza',
-        content: 'Ləzzətli Pepperoni Pizzalar burada',
+        priceDel: '22.99 ₼',
+        content: '19.99 ₼',
         image: '../image-menu/pizza5.jpg'
     },
     {
         title: 'Veggie Pizza',
-        content: 'Ləzzətli Veggie Pizzalar burada',
+        priceDel: '28.99 ₼',
+        content: '23.99 ₼',
         image: '../image-menu/pizza6.jpg'
     },
     {
         title: 'Portofino Pizza',
-        content: 'Ləzzətli Portofino Pizzalar burada',
+        priceDel: '30.99 ₼',
+        content: '25.99 ₼',
         image: '../image-menu/pizza7.jpg'
     },
     {
         title: 'Cheese Pizza',
-        content: 'Ləzzətli Cheese Pizzalar burada',
+        priceDel: '23.99 ₼',
+        content: '20.99 ₼',
         image: '../image-menu/pizza8.jpg'
     }
 ]
@@ -112,42 +120,50 @@ const pizzaMenu = [
 const hamburgerMenu = [
     {
         title: 'Angus Burger',
-        content: 'Ləzzətli Angus Burgerlər burada',
+        priceDel: '12.99 ₼',
+        content: '8.99 ₼',
         image: '../image-menu/hamburger1.jpg'
     },
     {
         title: 'Bufalo Burger',
-        content: 'Ləzzətli Bufalo Burgerlər burada',
+        priceDel: '14.99 ₼',
+        content: '9.99 ₼',
         image: '../image-menu/hamburger2.jpg'
     },
     {
         title: 'Cheesburger',
-        content: 'Ləzzətli Cheesburgerlər burada',
+        priceDel: '6.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/hamburger3.jpg'
     },
     {
         title: 'Veggie Burger',
-        content: 'Ləzzətli Veggie Burgerlər burada',
+        priceDel: '7.99 ₼',
+        content: '6.99 ₼',
         image: '../image-menu/hamburger4.jpg'
     },
     {
         title: 'Bean Burger',
-        content: 'Ləzzətli Bean Burgerlər burada',
+        priceDel: '10.99 ₼',
+        content: '8.99 ₼',
         image: '../image-menu/hamburger5.jpg'
     },
     {
         title: 'Chicken Burger',
-        content: 'Ləzzətli Chicken Burgerlər burada',
+        priceDel: '7.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/hamburger6.jpg'
     },
     {
         title: 'Crispy Fish Burger',
-        content: 'Ləzzətli Crispy Fish Burgerlər burada',
+        priceDel: '14.99 ₼',
+        content: '11.99 ₼',
         image: '../image-menu/hamburger7.webp'
     },
     {
         title: 'Double Burger',
-        content: 'Ləzzətli Double Burgerlər burada',
+        priceDel: '16.99 ₼',
+        content: '10.99 ₼',
         image: '../image-menu/hamburger8.webp'
     }
 ]
@@ -155,42 +171,50 @@ const hamburgerMenu = [
 const saladMenu = [
     {
         title: 'Çoban Salatı',
-        content: 'Ləzzətli Çoban Salatlar burada',
+        priceDel: '4.99 ₼',
+        content: '3.99 ₼',
         image: '../image-menu/salad1.webp'
     },
     {
-        title: 'Patyaxt Salatı',
-        content: 'Ləzzətli Paytaxt Salatlar burada',
-        image: '../image-menu/salad2.jpg'
+        title: 'İtalyan Salatı',
+        priceDel: '13.99 ₼',
+        content: '12.99 ₼',
+        image: '../image-menu/salad2.webp'
     },
     {
         title: 'Mimoza Salatı',
-        content: 'Ləzzətli Mimoza Salatlar burada',
+        priceDel: '5.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/salad3.jpg'
     },
     {
         title: 'Sezar Salatı',
-        content: 'Ləzzətli Sezar Salatlar burada',
+        priceDel: '14.99 ₼',
+        content: '12.99 ₼',
         image: '../image-menu/salad4.jpg'
     },
     {
         title: 'Toyuq Salatı',
-        content: 'Ləzzətli Bean Burgerlər burada',
+        priceDel: '7.99 ₼',
+        content: '6.99 ₼',
         image: '../image-menu/salad5.jpg'
     },
     {
         title: 'Göbələk Salatı',
-        content: 'Ləzzətli Göbələk Salatlar burada',
+        priceDel: '13.99 ₼',
+        content: '9.99 ₼',
         image: '../image-menu/salad6.jpg'
     },
     {
         title: 'Avakado Salatı',
-        content: 'Ləzzətli Avakado Salatlar burada',
+        priceDel: '21.99 ₼',
+        content: '16.99 ₼',
         image: '../image-menu/salad7.jpg'
     },
     {
         title: 'Yumurta Salatı',
-        content: 'Ləzzətli Yumurta Salatlar burada',
+        priceDel: '7.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/salad8.jpg'
     }
 ]
@@ -198,42 +222,50 @@ const saladMenu = [
 const sandwichMenu = [
     {
         title: 'Grilled Sandwich',
-        content: 'Ləzzətli Grilled Sandwichlər burada',
+        priceDel: '13.99 ₼',
+        content: '11.99 ₼',
         image: '../image-menu/sandwich1.webp'
     },
     {
         title: 'Panini Sandwich',
-        content: 'Ləzzətli Panini Sandwichlər burada',
+        priceDel: '17.99 ₼',
+        content: '14.99 ₼',
         image: '../image-menu/sandwich2.webp'
     },
     {
         title: 'Caprese Sandwich',
-        content: 'Ləzzətli Caprese Sandwichlər burada',
+        priceDel: '17.99 ₼',
+        content: '15.99 ₼',
         image: '../image-menu/sandwich3.jpg'
     },
     {
         title: 'Chicken Sandwich',
-        content: 'Ləzzətli Chicken Sandwichlər burada',
+        priceDel: '12.99 ₼',
+        content: '9.99 ₼',
         image: '../image-menu/sandwich4.jpg'
     },
     {
         title: 'Club Sandwich',
-        content: 'Ləzzətli Club Sandwichlər burada',
+        priceDel: '8.99 ₼',
+        content: '7.99 ₼',
         image: '../image-menu/sandwich5.jpg'
     },
     {
         title: 'Montreal Smoked Meat Sandwich',
-        content: 'Ləzzətli Montreal Smoked Meat Sandwichlər burada',
+        priceDel: '17.99 ₼',
+        content: '15.99 ₼',
         image: '../image-menu/sandwich6.jpg'
     },
     {
         title: `Schwartz's Sandwich`,
-        content: `Ləzzətli Schwartz's Sandwichlər burada`,
+        priceDel: '20.99 ₼',
+        content: '17.99 ₼',
         image: '../image-menu/sandwich7.jpg'
     },
     {
         title: 'Mortadella Sandwich',
-        content: 'Ləzzətli Mortadella Sandwichlər burada',
+        priceDel: '16.99 ₼',
+        content: '13.99 ₼',
         image: '../image-menu/sandwich8.jpg'
     }
 ]
@@ -241,42 +273,50 @@ const sandwichMenu = [
 const coctailsMenu = [
     {
         title: 'Mojito',
-        content: 'Dadlı Mojito İçkilər burada',
+        priceDel: '7.99 ₼',
+        content: '5.99 ₼',
         image: '../image-menu/drinks1.jpg'
     },
     {
         title: 'Pina Colada',
-        content: 'Dadlı Pina Colada İçkilər burada',
+        priceDel: '9.99 ₼',
+        content: '8.99 ₼',
         image: '../image-menu/drinks2.jpg'
     },
     {
         title: 'Grashoper',
-        content: 'Dadlı Grashopper İçkilər burada',
+        priceDel: '5.99 ₼',
+        content: '3.99 ₼',
         image: '../image-menu/drinks3.jpg'
     },
     {
         title: 'Margarita',
-        content: 'Dadlı Margarita İçkilər burada',
+        priceDel: '13.99 ₼',
+        content: '9.99 ₼',
         image: '../image-menu/drinks4.jpg'
     },
     {
         title: 'Cuba Libre',
-        content: 'Dadlı Cuba Libre İçkilər burada',
+        priceDel: '15.99 ₼',
+        content: '13.99 ₼',
         image: '../image-menu/drinks5.webp'
     },
     {
         title: 'Mai Tai',
-        content: 'Dadlı Mai Tai İçkilər burada',
+        priceDel: '8.99 ₼',
+        content: '6.99 ₼',
         image: '../image-menu/drinks6.jpg'
     },
     {
         title: 'Blue Lagoon',
-        content: `Dadlı Blue Lagoon İçkilər burada`,
+        priceDel: '16.99 ₼',
+        content: '12.99 ₼',
         image: '../image-menu/drinks7.jpg'
     },
     {
         title: 'Tequila Sunrise',
-        content: 'Dadlı Tequila Sunrise İçkilər burada',
+        priceDel: '14.99 ₼',
+        content: '11.99 ₼',
         image: '../image-menu/drinks8.jpg'
     }
 ]
@@ -284,42 +324,50 @@ const coctailsMenu = [
 const juiceMenu = [
     {
         title: 'Fanta',
-        content: 'Dadlı Fanta İçkilər burada',
+        priceDel: '3.99 ₼',
+        content: '2.99 ₼',
         image: '../image-menu/drinks9.jpg'
     },
     {
         title: 'Kola',
-        content: 'Dadlı Kola İçkilər burada',
+        priceDel: '3.99 ₼',
+        content: '2.99 ₼',
         image: '../image-menu/drinks10.webp'
     },
     {
         title: 'Sprite',
-        content: 'Dadlı Sprite İçkilər burada',
+        priceDel: '3.99 ₼',
+        content: '2.99 ₼',
         image: '../image-menu/drinks11.jpg'
     },
     {
         title: 'Pepsi',
-        content: 'Dadlı Pepsi İçkilər burada',
+        priceDel: '3.99 ₼',
+        content: '2.99 ₼',
         image: '../image-menu/drinks12.webp'
     },
     {
         title: 'Portağal Şirəsi',
-        content: 'Dadlı Portağal Şirələri burada',
+        priceDel: '5.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/drinks13.jpg'
     },
     {
         title: 'Alma Şirəsi',
-        content: 'Dadlı Alma Şirələri burada',
+        priceDel: '5.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/drinks14.jpg'
     },
     {
         title: 'Ananas Şirəsi',
-        content: `Dadlı Ananas Şirələri burada`,
+        priceDel: '8.99 ₼',
+        content: '6.99 ₼',
         image: '../image-menu/drinks15.jpg'
     },
     {
         title: 'Albalı Şirəsi',
-        content: 'Dadlı Albalı Şirələri burada',
+        priceDel: '5.99 ₼',
+        content: '4.99 ₼',
         image: '../image-menu/drinks16.jpg'
     }
 ]
@@ -338,6 +386,7 @@ const modalImgs = (typeImg, typeMap, imgModal) => {
                     imgModal.querySelector('img').setAttribute('src', val.image);
                     imgModal.querySelector('h1').textContent = val.title;
                     imgModal.querySelector('p').textContent = val.content;
+                    imgModal.querySelector('span').textContent = val.priceDel;
                 }
             })
 
@@ -346,39 +395,43 @@ const modalImgs = (typeImg, typeMap, imgModal) => {
 }
 
 
-modalImgs(pizzaImgs,pizzaMenu,menuImgModal);
-modalImgs(hamburgerImgs,hamburgerMenu,menuImgModal2);
-modalImgs(saladImgs,saladMenu,menuImgModal3);
-modalImgs(sandwichImgs,sandwichMenu,menuImgModal4);
-modalImgs(coctailImgs,coctailsMenu,menuImgModal5);
-modalImgs(juiceImgs,juiceMenu,menuImgModal6);
+modalImgs(pizzaImgs, pizzaMenu, menuImgModal);
+modalImgs(hamburgerImgs, hamburgerMenu, menuImgModal2);
+modalImgs(saladImgs, saladMenu, menuImgModal3);
+modalImgs(sandwichImgs, sandwichMenu, menuImgModal4);
+modalImgs(coctailImgs, coctailsMenu, menuImgModal5);
+modalImgs(juiceImgs, juiceMenu, menuImgModal6);
 
 
 
-const closeImgModal=(menuImg)=>{
+const closeImgModal = (menuImg) => {
     menuImg.style.display = 'none';
 }
 
-closeModal.forEach(val=>{
+closeModal.forEach(val => {
     val.onclick = () => {
-       closeImgModal(menuImgModal);
-       closeImgModal(menuImgModal2);
-       closeImgModal(menuImgModal3);
-       closeImgModal(menuImgModal4);
-       closeImgModal(menuImgModal5);
-       closeImgModal(menuImgModal6);
+        closeImgModal(menuImgModal);
+        closeImgModal(menuImgModal2);
+        closeImgModal(menuImgModal3);
+        closeImgModal(menuImgModal4);
+        closeImgModal(menuImgModal5);
+        closeImgModal(menuImgModal6);
     }
 })
 
+const clickCloseMenuImgModal = (imgModalType) => {
 
+    imgModalType.ondblclick = () => {
+        imgModalType.style.display = 'none'
+    }
+}
 
-
-
-
-
-
-
-
+clickCloseMenuImgModal(menuImgModal)
+clickCloseMenuImgModal(menuImgModal2)
+clickCloseMenuImgModal(menuImgModal3)
+clickCloseMenuImgModal(menuImgModal4)
+clickCloseMenuImgModal(menuImgModal5)
+clickCloseMenuImgModal(menuImgModal6)
 
 
 
@@ -396,17 +449,31 @@ faBars.addEventListener('click', () => {
     }
 })
 
-faSun.addEventListener('click', () => {
+
+
+
+
+faSun.onclick = () => {
+
     docBody.classList.toggle('lightMode');
+    faSun.classList.toggle('fa-moon');
+    localStorage.setItem('light', docBody.classList);
+    localStorage.setItem('darkModeIcon', faSun.classList)
+}
 
-    if (docBody.classList.contains('lightMode')) {
-        faSun.classList.replace('fa-sun', 'fa-moon')
-
-    }
-    else {
-        faSun.classList.replace('fa-moon', 'fa-sun')
-
-    }
+if (localStorage.getItem('light') === '') {
+    docBody.classList.add(localStorage.getItem('light'))
+    faSun.classList.replace('fa-moon', 'fa-sun')
 
 
-})
+}
+else {
+    docBody.classList.add(localStorage.getItem('light'))
+    faSun.classList.add('fa-moon')
+
+}
+
+
+
+
+

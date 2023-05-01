@@ -1061,11 +1061,11 @@ nav ul li a {
     .section-2,
     .section-3,
     .section-4 {
-        padding: 0px 10px;
+        padding: 0px 20px;
     }
 
     #footer {
-        padding: 70px 10px 70px 10px;
+        padding: 70px 20px 70px 20px;
     }
 }
 

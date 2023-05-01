@@ -128,16 +128,23 @@ faBars.onclick = () => {
     }
 }
 
+
 faSun.onclick = () => {
+
     docBody.classList.toggle('lightMode');
+    faSun.classList.toggle('fa-moon');
+    localStorage.setItem('light',docBody.classList);
+    localStorage.setItem('darkModeIcon',faSun.classList)
+}
 
-    if (docBody.classList.contains('lightMode')) {
-        faSun.classList.replace('fa-sun', 'fa-moon')
-
-    }
-    else {
-        faSun.classList.replace('fa-moon', 'fa-sun')
-
-    }
+if (localStorage.getItem('light')==='') {
+    docBody.classList.add(localStorage.getItem('light'))
+    faSun.classList.replace('fa-moon','fa-sun')
+    
+    
+}
+else {
+    docBody.classList.add(localStorage.getItem('light'))
+    faSun.classList.add('fa-moon')
 
 }
