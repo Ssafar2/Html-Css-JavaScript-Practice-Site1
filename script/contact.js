@@ -187,7 +187,7 @@ let contactUs={
 }
 
 let jobForm={
-    origin:'right',
+    origin:'top',
     distance:'25rem',
     delay:300,
     duration:1000
