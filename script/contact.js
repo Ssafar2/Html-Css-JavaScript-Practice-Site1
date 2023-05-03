@@ -14,11 +14,11 @@ const profileImg = document.getElementById('profile-img');
 const resetButton = document.querySelector('#contact-reset-button');
 const textArea = document.querySelector('#textarea');
 const textLength = document.querySelector('.text-length');
-const contactName=document.querySelector('#name');
-const contactsurName=document.querySelector('#surname');
-const contactDate=document.querySelector('#contact-date');
-const contactMale=document.querySelector('#male');
-const contactFemale=document.querySelector('#female');
+const contactName = document.querySelector('#name');
+const contactsurName = document.querySelector('#surname');
+const contactDate = document.querySelector('#contact-date');
+const contactMale = document.querySelector('#male');
+const contactFemale = document.querySelector('#female');
 
 
 
@@ -116,29 +116,29 @@ checkProfile.onchange = () => {
 
 
 
-const inputLocal=(names,type,eTargetValue,localType)=>{
+const inputLocal = (names, type, eTargetValue, localType) => {
 
-    names.addEventListener(`${type}`,e=>{
-        eTargetValue=e.target.value;
-        localStorage.setItem(`${localType}`,eTargetValue);
+    names.addEventListener(`${type}`, e => {
+        eTargetValue = e.target.value;
+        localStorage.setItem(`${localType}`, eTargetValue);
     });
 }
 
-inputLocal(contactName,'input',contactName.value,'name');
-inputLocal(contactsurName,'input',contactsurName.value,'surname');
-inputLocal(contactInputsEmail,'input',contactInputsEmail.value,'email');
-inputLocal(contactDate,'change',contactDate.value,'date');
-inputLocal(textArea,'input',textArea.value,'textarea');
+inputLocal(contactName, 'input', contactName.value, 'name');
+inputLocal(contactsurName, 'input', contactsurName.value, 'surname');
+inputLocal(contactInputsEmail, 'input', contactInputsEmail.value, 'email');
+inputLocal(contactDate, 'change', contactDate.value, 'date');
+inputLocal(textArea, 'input', textArea.value, 'textarea');
 
 
 
 window.onload = () => {
-    profileImg.src=localStorage.getItem('profileImg');
-    contactName.value=localStorage.getItem('name');
-    contactsurName.value=localStorage.getItem('surname');
-    contactInputsEmail.value=localStorage.getItem('email');
-    contactDate.value=localStorage.getItem('date');
-    textArea.value=localStorage.getItem('textarea');
+    profileImg.src = localStorage.getItem('profileImg');
+    contactName.value = localStorage.getItem('name');
+    contactsurName.value = localStorage.getItem('surname');
+    contactInputsEmail.value = localStorage.getItem('email');
+    contactDate.value = localStorage.getItem('date');
+    textArea.value = localStorage.getItem('textarea');
 }
 
 
@@ -150,12 +150,13 @@ resetButton.addEventListener('click', () => {
     localStorage.setItem('profileImg', profileImg.src);
     textLength.textContent = 0;
     contactInputsEmail.value = '';
-    contactName.value=localStorage.setItem('name','')
-    contactsurName.value=localStorage.setItem('surname','')
-    contactInputsEmail.value=localStorage.setItem('email','')
-    contactDate.value=localStorage.setItem('date','')
-    textArea.value=localStorage.setItem('textarea','')
+    contactName.value = localStorage.setItem('name', '')
+    contactsurName.value = localStorage.setItem('surname', '')
+    contactInputsEmail.value = localStorage.setItem('email', '')
+    contactDate.onchange = localStorage.setItem('date', '')
+    textArea.value = localStorage.setItem('textarea', '')
 })
+
 
 
 
@@ -180,8 +181,80 @@ textArea.addEventListener('input', () => {
 
 
 
+let jobFormHeader={
+    origin:'top',
+    distance:'25rem',
+    delay:300,
+    duration:1000
+}
+
+let contactHeader={
+    origin:'top',
+    distance:'25rem',
+    delay:300,
+    duration:1000
+}
+
+ScrollReveal().reveal('.job-form-header',jobFormHeader);
+ScrollReveal().reveal('.contact-header',contactHeader);
 
 
 
-console.log(profileImg.src);
+
+
+let contactUs={
+    origin:'left',
+    distance:'25rem',
+    delay:600,
+    duration:1000
+}
+
+let jobForm={
+    origin:'right',
+    distance:'25rem',
+    delay:1200,
+    duration:1000
+}
+
+ScrollReveal().reveal('.contact-us',contactUs);
+ScrollReveal().reveal('.job-form',jobForm);
+
+
+
+
+
+
+
+
+
+let footerLogo={
+    origin:'top',
+    distance:'25rem',
+    delay:500,
+    duration:1000
+}
+
+let footerContact={
+    origin:'bottom',
+    distance:'25rem',
+    delay:1000,
+    duration:1000
+}
+
+let footerSubscribe={
+    origin:'top',
+    distance:'25rem',
+    delay:500,
+    duration:1000
+}
+
+ScrollReveal().reveal('.footer-logo',footerLogo);
+ScrollReveal().reveal('.footer-contact',footerContact);
+ScrollReveal().reveal('.footer-subscribe',footerSubscribe);
+
+
+
+
+
+
 

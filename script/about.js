@@ -79,3 +79,31 @@ else {
     faSun.classList.add('fa-moon')
 
 }
+
+
+
+
+let footerLogo={
+    origin:'top',
+    distance:'25rem',
+    delay:500,
+    duration:1000
+}
+
+let footerContact={
+    origin:'bottom',
+    distance:'25rem',
+    delay:1000,
+    duration:1000
+}
+
+let footerSubscribe={
+    origin:'top',
+    distance:'25rem',
+    delay:500,
+    duration:1000
+}
+
+ScrollReveal().reveal('.footer-logo',footerLogo);
+ScrollReveal().reveal('.footer-contact',footerContact);
+ScrollReveal().reveal('.footer-subscribe',footerSubscribe);

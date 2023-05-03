@@ -109,8 +109,8 @@ body.lightMode {
 
 #header {
     width: 100%;
-    height: 100vh;
-    background-image: url('../image/header.jpg');
+    height: 70vh;
+    background-image: url('../image-about/about-head.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -206,7 +206,7 @@ nav .fa-bars {
 nav {
     width: 100%;
     height: 90px;
-    background-color: var(--bgColor);
+    background-color: var(--navColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -663,15 +663,12 @@ nav ul li a {
 }
 
 
-
-
-
 @media screen and (min-width:200px) and (max-width:945px) {
 
     nav ul {
         width: 100%;
         background-color: var(--navColor);
-        position: fixed;
+        position: absolute;
         top: 150px;
         left: 0;
         display: flex;
