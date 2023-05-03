@@ -53,7 +53,7 @@ subsButton.onclick = () => {
     }
 
 
-    else  if (!subsInput.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
+    else if (!subsInput.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
 
         inputSituation(inputWarning, inputSuccess, inputDanger, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Girilən dəyər mail @ tipində olmalıdır !');
 
@@ -461,9 +461,9 @@ faSun.onclick = () => {
     localStorage.setItem('darkModeIcon', faSun.classList)
 }
 
-if (localStorage.getItem('light')==='') {
+if (localStorage.getItem('light') === '') {
     // docBody.classList.add(localStorage.getItem('light'))
-    faSun.classList.replace('fa-moon','fa-sun')
+    faSun.classList.replace('fa-moon', 'fa-sun')
 }
 else {
     docBody.classList.add(localStorage.getItem('light'))
@@ -473,137 +473,191 @@ else {
 
 
 
-let pizzaHead={
-    origin:'top',
-    distance:'25rem',
-    delay:200,
-    duration:1000
+let pizzaHead = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 200,
+    duration: 1000
 }
 
-let hamburgerHead={
-    origin:'top',
-    distance:'25rem',
-    delay:200,
-    duration:1000
+let hamburgerHead = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 200,
+    duration: 1000
 }
 
-let saladHead={
-    origin:'top',
-    distance:'25rem',
-    delay:200,
-    duration:1000
+let saladHead = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 200,
+    duration: 1000
 }
 
-let sandwichHead={
-    origin:'top',
-    distance:'25rem',
-    delay:200,
-    duration:1000
+let sandwichHead = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 200,
+    duration: 1000
 }
 
-let coctailHead={
-    origin:'top',
-    distance:'25rem',
-    delay:200,
-    duration:1000
+let coctailHead = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 200,
+    duration: 1000
 }
 
-let juiceHead={
-    origin:'top',
-    distance:'25rem',
-    delay:200,
-    duration:1000
+let juiceHead = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 200,
+    duration: 1000
 }
 
-ScrollReveal().reveal('.pizza-head',pizzaHead);
-ScrollReveal().reveal('.hamburger-head',hamburgerHead);
-ScrollReveal().reveal('.salad-head',saladHead);
-ScrollReveal().reveal('.sandwich-head',sandwichHead);
-ScrollReveal().reveal('.coctail-head',coctailHead);
-ScrollReveal().reveal('.juice-head',juiceHead);
+ScrollReveal().reveal('.pizza-head', pizzaHead);
+ScrollReveal().reveal('.hamburger-head', hamburgerHead);
+ScrollReveal().reveal('.salad-head', saladHead);
+ScrollReveal().reveal('.sandwich-head', sandwichHead);
+ScrollReveal().reveal('.coctail-head', coctailHead);
+ScrollReveal().reveal('.juice-head', juiceHead);
 
 
 
 
 
-ScrollReveal().reveal('.pz1',{delay:250})
-ScrollReveal().reveal('.pz2',{delay:500})
-ScrollReveal().reveal('.pz3',{delay:750})
-ScrollReveal().reveal('.pz4',{delay:1000})
-ScrollReveal().reveal('.pz5',{delay:1250})
-ScrollReveal().reveal('.pz6',{delay:1500})
-ScrollReveal().reveal('.pz7',{delay:1750})
-ScrollReveal().reveal('.pz8',{delay:2000})
+ScrollReveal().reveal('.pz1', { delay: 250 })
+ScrollReveal().reveal('.pz2', { delay: 500 })
+ScrollReveal().reveal('.pz3', { delay: 750 })
+ScrollReveal().reveal('.pz4', { delay: 1000 })
+ScrollReveal().reveal('.pz5', { delay: 1250 })
+ScrollReveal().reveal('.pz6', { delay: 1500 })
+ScrollReveal().reveal('.pz7', { delay: 1750 })
+ScrollReveal().reveal('.pz8', { delay: 2000 })
 
-ScrollReveal().reveal('.hmb1',{delay:250})
-ScrollReveal().reveal('.hmb2',{delay:500})
-ScrollReveal().reveal('.hmb3',{delay:750})
-ScrollReveal().reveal('.hmb4',{delay:1000})
-ScrollReveal().reveal('.hmb5',{delay:1250})
-ScrollReveal().reveal('.hmb6',{delay:1500})
-ScrollReveal().reveal('.hmb7',{delay:1750})
-ScrollReveal().reveal('.hmb8',{delay:2000})
+ScrollReveal().reveal('.hmb1', { delay: 250 })
+ScrollReveal().reveal('.hmb2', { delay: 500 })
+ScrollReveal().reveal('.hmb3', { delay: 750 })
+ScrollReveal().reveal('.hmb4', { delay: 1000 })
+ScrollReveal().reveal('.hmb5', { delay: 1250 })
+ScrollReveal().reveal('.hmb6', { delay: 1500 })
+ScrollReveal().reveal('.hmb7', { delay: 1750 })
+ScrollReveal().reveal('.hmb8', { delay: 2000 })
 
-ScrollReveal().reveal('.sld1',{delay:250})
-ScrollReveal().reveal('.sld2',{delay:500})
-ScrollReveal().reveal('.sld3',{delay:750})
-ScrollReveal().reveal('.sld4',{delay:1000})
-ScrollReveal().reveal('.sld5',{delay:1250})
-ScrollReveal().reveal('.sld6',{delay:1500})
-ScrollReveal().reveal('.sld7',{delay:1750})
-ScrollReveal().reveal('.sld8',{delay:2000})
+ScrollReveal().reveal('.sld1', { delay: 250 })
+ScrollReveal().reveal('.sld2', { delay: 500 })
+ScrollReveal().reveal('.sld3', { delay: 750 })
+ScrollReveal().reveal('.sld4', { delay: 1000 })
+ScrollReveal().reveal('.sld5', { delay: 1250 })
+ScrollReveal().reveal('.sld6', { delay: 1500 })
+ScrollReveal().reveal('.sld7', { delay: 1750 })
+ScrollReveal().reveal('.sld8', { delay: 2000 })
 
-ScrollReveal().reveal('.swh1',{delay:250})
-ScrollReveal().reveal('.swh2',{delay:500})
-ScrollReveal().reveal('.swh3',{delay:750})
-ScrollReveal().reveal('.swh4',{delay:1000})
-ScrollReveal().reveal('.swh5',{delay:1250})
-ScrollReveal().reveal('.swh6',{delay:1500})
-ScrollReveal().reveal('.swh7',{delay:1750})
-ScrollReveal().reveal('.swh8',{delay:2000})
+ScrollReveal().reveal('.swh1', { delay: 250 })
+ScrollReveal().reveal('.swh2', { delay: 500 })
+ScrollReveal().reveal('.swh3', { delay: 750 })
+ScrollReveal().reveal('.swh4', { delay: 1000 })
+ScrollReveal().reveal('.swh5', { delay: 1250 })
+ScrollReveal().reveal('.swh6', { delay: 1500 })
+ScrollReveal().reveal('.swh7', { delay: 1750 })
+ScrollReveal().reveal('.swh8', { delay: 2000 })
 
-ScrollReveal().reveal('.ctcl1',{delay:250})
-ScrollReveal().reveal('.ctcl2',{delay:500})
-ScrollReveal().reveal('.ctcl3',{delay:750})
-ScrollReveal().reveal('.ctcl4',{delay:1000})
-ScrollReveal().reveal('.ctcl5',{delay:1250})
-ScrollReveal().reveal('.ctcl6',{delay:1500})
-ScrollReveal().reveal('.ctcl7',{delay:1750})
-ScrollReveal().reveal('.ctcl8',{delay:2000})
+ScrollReveal().reveal('.ctcl1', { delay: 250 })
+ScrollReveal().reveal('.ctcl2', { delay: 500 })
+ScrollReveal().reveal('.ctcl3', { delay: 750 })
+ScrollReveal().reveal('.ctcl4', { delay: 1000 })
+ScrollReveal().reveal('.ctcl5', { delay: 1250 })
+ScrollReveal().reveal('.ctcl6', { delay: 1500 })
+ScrollReveal().reveal('.ctcl7', { delay: 1750 })
+ScrollReveal().reveal('.ctcl8', { delay: 2000 })
 
-ScrollReveal().reveal('.jc1',{delay:250})
-ScrollReveal().reveal('.jc2',{delay:500})
-ScrollReveal().reveal('.jc3',{delay:750})
-ScrollReveal().reveal('.jc4',{delay:1000})
-ScrollReveal().reveal('.jc5',{delay:1250})
-ScrollReveal().reveal('.jc6',{delay:1500})
-ScrollReveal().reveal('.jc7',{delay:1750})
-ScrollReveal().reveal('.jc8',{delay:2000})
-
-
+ScrollReveal().reveal('.jc1', { delay: 250 })
+ScrollReveal().reveal('.jc2', { delay: 500 })
+ScrollReveal().reveal('.jc3', { delay: 750 })
+ScrollReveal().reveal('.jc4', { delay: 1000 })
+ScrollReveal().reveal('.jc5', { delay: 1250 })
+ScrollReveal().reveal('.jc6', { delay: 1500 })
+ScrollReveal().reveal('.jc7', { delay: 1750 })
+ScrollReveal().reveal('.jc8', { delay: 2000 })
 
 
-let footerLogo={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
+
+
+let footerLogo = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 500,
+    duration: 1000
 }
 
-let footerContact={
-    origin:'bottom',
-    distance:'25rem',
-    delay:1000,
-    duration:1000
+let footerContact = {
+    origin: 'bottom',
+    distance: '25rem',
+    delay: 1000,
+    duration: 1000
 }
 
-let footerSubscribe={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
+let footerSubscribe = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 500,
+    duration: 1000
 }
 
-ScrollReveal().reveal('.footer-logo',footerLogo);
-ScrollReveal().reveal('.footer-contact',footerContact);
-ScrollReveal().reveal('.footer-subscribe',footerSubscribe);
+ScrollReveal().reveal('.footer-logo', footerLogo);
+ScrollReveal().reveal('.footer-contact', footerContact);
+ScrollReveal().reveal('.footer-subscribe', footerSubscribe);
+
+
+
+
+window.addEventListener('scroll', () => {
+
+    let winScrollY = window.scrollY;
+
+
+    console.log(winScrollY);
+
+    const innerWidthNumber = (num1, num2) => {
+
+        if (winScrollY > num1) {
+
+            document.querySelector('.top-arrow').classList.add('show-top-arrow')
+        }
+        else {
+            document.querySelector('.top-arrow').classList.remove('show-top-arrow')
+        }
+
+        if (winScrollY < num2) {
+            document.querySelector('.bottom-arrow').classList.add('show-bottom-arrow')
+        }
+        else {
+
+            document.querySelector('.bottom-arrow').classList.remove('show-bottom-arrow')
+        }
+
+    }
+
+
+  
+
+
+    if (window.innerWidth > 970) {
+
+        innerWidthNumber(532, 4680)
+    }
+
+
+    else if (window.innerWidth < 970 && window.innerWidth >= 635) {
+
+        innerWidthNumber(918, 7150)
+    }
+
+    else if (window.innerWidth < 635) {
+
+        innerWidthNumber(587, 14087)
+
+    }
+
+
+})

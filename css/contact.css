@@ -100,7 +100,23 @@ body.lightMode {
 .top-arrow {
     bottom: 70px;
     right: 20px;
+    display: none;
 }
+
+.bottom-arrow {
+    display: none;
+}
+
+
+
+.show-top-arrow{
+    display: flex;
+}
+
+.show-bottom-arrow{
+    display: flex;
+}
+
 
 .bottom-arrow i,
 .top-arrow i {
@@ -2034,8 +2050,23 @@ nav ul li a {
     }
 
     .top-arrow {
-        bottom: 55px;
+        bottom: 52px;
         right: 20px;
+        display: none;
+    }
+    
+    .bottom-arrow {
+        display: none;
+    }
+    
+    
+    
+    .show-top-arrow{
+        display: flex;
+    }
+    
+    .show-bottom-arrow{
+        display: flex;
     }
 
     .bottom-arrow i,

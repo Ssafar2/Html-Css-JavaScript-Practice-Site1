@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bizlə Əlaqə</title>
     <link rel="stylesheet" href="/css/contact.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script defer src="/script/contact.js"></script>
@@ -125,10 +128,10 @@
             <div class="job-form-body">
                 <form class="job-form">
                     <div class="name-surname">
-                        <input maxlength="15" minlength="2" type="text" id="name" placeholder="Adınızı girin" required pattern="[A-zıəöğüşç]{3,15}"
+                        <input maxlength="15" minlength="2" type="text" id="name" placeholder="Adınızı girin" required   pattern="[A-zıəöğüşç /A-ZIƏÖĞİŞÇ]{3,15}""
                         title="Xəta! Girilən dəyər 2 və 15 uzunluq aralığında olmalıdır.">
                         <input maxlength="15" min="5" type="text" id="surname" placeholder="Soyadınızı girin" required
-                            pattern="[A-zıəöğüşç]{5,15}"  title="Xəta! Girilən dəyər 5 və ya 15 hərf aralığında olmalıdır.">
+                            pattern="[A-zıəöğüşç A-ZIƏÖĞİŞÇ]{5,15}"  title="Xəta! Girilən dəyər 5 və ya 15 hərf aralığında olmalıdır.">
                     </div>
                     <div class="job-form-email-date">
                         <input type="email" id="contact-email" placeholder="Email adresinizi girin" required>

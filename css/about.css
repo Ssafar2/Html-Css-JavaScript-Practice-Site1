@@ -97,7 +97,23 @@ body.lightMode {
 .top-arrow {
     bottom: 70px;
     right: 20px;
+    display: none;
 }
+
+.bottom-arrow {
+    display: none;
+}
+
+
+
+.show-top-arrow{
+    display: flex;
+}
+
+.show-bottom-arrow{
+    display: flex;
+}
+
 
 .bottom-arrow i,
 .top-arrow i {
@@ -109,14 +125,14 @@ body.lightMode {
 
 #header {
     width: 100%;
-    height: 70vh;
+    height: 85vh;
     background-image: url('../image-about/about-head.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    object-fit: cover;
+    object-fit: fill;
 }
+
 
 .headerUl {
     width: 100%;
@@ -1137,8 +1153,23 @@ nav ul li a {
     }
 
     .top-arrow {
-        bottom: 55px;
+        bottom: 52px;
         right: 20px;
+        display: none;
+    }
+    
+    .bottom-arrow {
+        display: none;
+    }
+    
+    
+    
+    .show-top-arrow{
+        display: flex;
+    }
+    
+    .show-bottom-arrow{
+        display: flex;
     }
 
     .bottom-arrow i,

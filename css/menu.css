@@ -98,7 +98,23 @@ body.lightMode {
 .top-arrow {
     bottom: 70px;
     right: 20px;
+    display: none;
 }
+
+.bottom-arrow {
+    display: none;
+}
+
+
+
+.show-top-arrow{
+    display: flex;
+}
+
+.show-bottom-arrow{
+    display: flex;
+}
+
 
 .bottom-arrow i,
 .top-arrow i {
@@ -231,6 +247,7 @@ nav ul {
 
 nav ul li {
     margin-left: 15px;
+
 }
 
 nav ul li:hover {
@@ -1410,11 +1427,27 @@ nav ul li a {
     .bottom-arrow:hover {
         transform: scale(1.2);
     }
-
+    
     .top-arrow {
-        bottom: 55px;
+        bottom: 52px;
         right: 20px;
+        display: none;
     }
+    
+    .bottom-arrow {
+        display: none;
+    }
+    
+    
+    
+    .show-top-arrow{
+        display: flex;
+    }
+    
+    .show-bottom-arrow{
+        display: flex;
+    }
+    
 
     .bottom-arrow i,
     .top-arrow i {

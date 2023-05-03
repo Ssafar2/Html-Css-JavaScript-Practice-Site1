@@ -230,3 +230,50 @@ ScrollReveal().reveal('.footer-subscribe',footerSubscribe);
 
 
 
+window.addEventListener('scroll', () => {
+    let winScrollY = window.scrollY;
+
+    const innerWidthNumber = (num1, num2) => {
+
+        if (winScrollY > num1) {
+         
+            document.querySelector('.top-arrow').classList.add('show-top-arrow')
+        }
+        else {
+            document.querySelector('.top-arrow').classList.remove('show-top-arrow')
+        }
+
+        if (winScrollY < num2) {
+            document.querySelector('.bottom-arrow').classList.add('show-bottom-arrow')
+        }
+        else {
+
+            document.querySelector('.bottom-arrow').classList.remove('show-bottom-arrow')
+        }
+
+    }
+
+
+    console.log(window.innerWidth);
+
+
+    if (window.innerWidth > 970) {
+
+        innerWidthNumber(407, 407)
+    }
+
+
+    else if (window.innerWidth < 970 && window.innerWidth >= 635) {
+
+        innerWidthNumber(500, 500)
+    }
+
+    else if (window.innerWidth < 635) {
+
+        innerWidthNumber(600, 600)
+
+    }
+
+
+})
+
