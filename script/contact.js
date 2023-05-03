@@ -13,7 +13,12 @@ const checkProfile = document.getElementById('file');
 const profileImg = document.getElementById('profile-img');
 const resetButton = document.querySelector('#contact-reset-button');
 const textArea = document.querySelector('#textarea');
-const textLength = document.querySelector('.text-length')
+const textLength = document.querySelector('.text-length');
+const contactName=document.querySelector('#name');
+const contactsurName=document.querySelector('#surname');
+const contactDate=document.querySelector('#contact-date');
+const contactMale=document.querySelector('#male');
+const contactFemale=document.querySelector('#female');
 
 
 
@@ -99,37 +104,64 @@ contactInputsEmail.onkeyup = () => {
 
         contactInputsEmail.style.border = '3px solid #38b000'
     }
-
-
-
 }
 
 
 
 
 checkProfile.onchange = () => {
-
     profileImg.setAttribute('src', URL.createObjectURL(checkProfile.files[0]))
     localStorage.setItem('profileImg', profileImg.src);
-
 }
+
+
+
+const inputLocal=(names,type,eTargetValue,localType)=>{
+
+    names.addEventListener(`${type}`,e=>{
+        eTargetValue=e.target.value;
+        localStorage.setItem(`${localType}`,eTargetValue);
+    });
+}
+
+inputLocal(contactName,'input',contactName.value,'name');
+inputLocal(contactsurName,'input',contactsurName.value,'surname');
+inputLocal(contactInputsEmail,'input',contactInputsEmail.value,'email');
+inputLocal(contactDate,'change',contactDate.value,'date');
+inputLocal(textArea,'input',textArea.value,'textarea');
+
+
 
 window.onload = () => {
-    profileImg.setAttribute('src', localStorage.getItem('profileImg'))
+    profileImg.src=localStorage.getItem('profileImg');
+    contactName.value=localStorage.getItem('name');
+    contactsurName.value=localStorage.getItem('surname');
+    contactInputsEmail.value=localStorage.getItem('email');
+    contactDate.value=localStorage.getItem('date');
+    textArea.value=localStorage.getItem('textarea');
 }
+
+
+
 
 
 resetButton.addEventListener('click', () => {
     profileImg.src = '#';
     localStorage.setItem('profileImg', profileImg.src);
     textLength.textContent = 0;
-contactInputsEmail.value='';
+    contactInputsEmail.value = '';
+    contactName.value=localStorage.setItem('name','')
+    contactsurName.value=localStorage.setItem('surname','')
+    contactInputsEmail.value=localStorage.setItem('email','')
+    contactDate.value=localStorage.setItem('date','')
+    textArea.value=localStorage.setItem('textarea','')
 })
 
 
 
-let limit = 150;
 
+
+let limit = 150;
 textArea.addEventListener('input', () => {
 
     textLength.textContent = textArea.value.length;
@@ -140,7 +172,7 @@ textArea.addEventListener('input', () => {
     }
     else {
 
-        textLength.style.color = '#fff'
+        textLength.style.color = 'var(--txtColor)'
     }
 
 })
@@ -151,5 +183,5 @@ textArea.addEventListener('input', () => {
 
 
 
-
+console.log(profileImg.src);
 

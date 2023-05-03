@@ -1442,7 +1442,6 @@ nav ul li a {
     }
 
     .profile-picture img {
-        flex-basis: 100%;
         width: 150px;
         height: 150px;
         border-radius: 50%;
