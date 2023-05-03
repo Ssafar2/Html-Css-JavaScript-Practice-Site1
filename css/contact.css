@@ -9,6 +9,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+    user-select: none;
 }
 
 
@@ -39,7 +40,7 @@ body {
     height: 100vh;
     --bgColor: rgb(11, 9, 10);
     --txtColor: #fff;
-    --navColor: rgba(11, 9, 10, 0.6);
+    --navColor: rgba(11, 9, 10, 0.7);
     --iconColor: #fb5607;
     --spanColor: #fff;
     --iconHoverColor: #fff;
@@ -58,7 +59,7 @@ body.lightMode {
     height: 100vh;
     --bgColor: rgb(255, 255, 255);
     --txtColor: #0b090a;
-    --navColor: rgba(255, 255, 255, 0.6);
+    --navColor: rgba(255, 255, 255, 0.7);
     --iconColor: #fff;
     --spanColor: #fb5607;
     --iconHoverColor: #fb5607;
@@ -86,6 +87,7 @@ body.lightMode {
     border-radius: 50%;
     cursor: pointer;
     transition: .5s;
+    z-index: 9999999;
 }
 
 .top-arrow:hover,
@@ -108,13 +110,12 @@ body.lightMode {
 
 #header {
     width: 100%;
-    height: 100vh;
-    background-image: url('../image/header.jpg');
+    height: 70vh;
+    background-image: url('../image/contact-back.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .headerUl {
@@ -200,12 +201,10 @@ nav .fa-bars {
 
 }
 
-
-
 nav {
     width: 100%;
     height: 90px;
-    background-color: var(--bgColor);
+    background-color: var(--navColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -253,72 +252,305 @@ nav ul li a {
     font-size: 19px;
 }
 
-.header-info {
+
+
+
+
+
+#contact {
     width: 100%;
     height: auto;
-    padding: 0px 100px;
-    margin-top: calc((100vh - 295px) / 2);
-}
-
-.header-info h1 {
-    color: var(--iconColor);
+    background-color: var(--bgColor);
+    color: var(--txtColor);
+    display: flex;
+    align-items: centere;
+    justify-content: space-between;
+    padding: 0 100px;
+    gap: 20px;
     transition: 1s;
 }
 
-.header-info strong {
-    color: var(--spanColor);
+
+
+.contact-us,
+.job-form {
+    flex-basis: 50%;
+
+}
+
+.contact-header,
+.job-form-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-header h1,
+.job-form-header h1 {
+    font-size: 35px;
     font-weight: 900;
-    text-shadow: 5px 5px 5px black;
-    transition: 1s;
 }
 
-.header-info h3 {
-    color: var(--iconColor);
-    text-shadow: 5px 5px 5px black;
-    margin: 5px 0 25px 0;
-    transition: 1s;
+.contact-body,
+.job-form-body {
+    width: 100%;
 }
 
-.header-info a {
+.contact-telephone,
+.contact-email,
+.contact-web,
+.contact-address {
+    display: flex;
+    align-items: center;
+}
+
+.contact-telephone p,
+.contact-email p,
+.contact-web p,
+.contact-address p {
+    margin-right: 8px;
+    line-height: 40px;
+    font-size: 21px;
+}
+
+.contact-telephone p:first-child,
+.contact-email p:first-child,
+.contact-web p:first-child,
+.contact-address p:first-child {
+    font-weight: 600;
+}
+
+
+
+
+.name-surname {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.name-surname input:invalid {
+    flex-basis: 48%;
+    padding: 10px 0;
+    outline: none;
+    border: 3px solid #bf0603;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.name-surname input:valid {
+    flex-basis: 48%;
+    padding: 10px 0;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 3px solid #38b000;
+}
+
+
+
+.job-form-email-date {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+
+
+.job-form-email-date input:first-child {
+    flex-basis: 48%;
+    padding: 10px 0;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 3px solid #bf0603;
+}
+
+
+
+
+
+.job-form-email-date input:last-child:valid {
+    flex-basis: 48%;
+    padding: 8.5px 0;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 3px solid #38b000;
+}
+
+.job-form-email-date input:last-child:invalid {
+    flex-basis: 48%;
+    padding: 8.5px 0;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 3px solid #bf0603;
+}
+
+
+
+
+
+.job-form-gender {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.male,
+.female {
+    display: flex;
+    align-items: center;
+}
+
+.male input,
+.female input {
+    margin-left: 10px;
+}
+
+.gender-labels {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.job-form-gender .male {
+    margin-right: 15px;
+}
+
+#male {
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px #023e8a;
+    ;
+    appearance: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    transition: all ease-in 0.2s;
+}
+
+#male:checked {
+
+    background-color: #023e8a;
+}
+
+#female {
+    border: 2px solid white;
+    box-shadow: 0 0 0 1px #ff0a54;
+    appearance: none;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    transition: all ease-in 0.2s;
+}
+
+#female:checked {
+
+    background-color: #ff0a54;
+}
+
+.contact-social-media-header {
+    margin-top: 20px;
+}
+
+.contact-social-media-header h3 {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.contact-social-media-icons {
+    display: flex;
+    column-gap: 10px;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+
+.profile-picture {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--txtColor);
+    margin: 0 20px 10px 80px;
+}
+
+#textarea {
+    flex-basis: 100%;
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 15px;
+    outline: none;
+    font-size: 16px;
+    overflow: auto;
+    resize: none;
+}
+
+#texatea:focus {
+    color: var(--txtColor);
+}
+
+
+.textarea-length {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.textarea-length p {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    flex-basis: 100%;
+}
+
+
+.job-form-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.job-form button {
+    padding: 13px 18px;
     border: 0;
     outline: 0;
-    border-radius: 10px;
+    border-radius: 15px;
+    background-color: var(--spanColor);
+    color: var(--liHoverColor);
+    transition: 0.5s;
+}
+
+.job-form button:hover {
     cursor: pointer;
-    font-size: 18px;
-    padding: 13px 18px;
-}
-
-.order {
-    background-color: var(--iconColor);
-    color: var(--iconHoverColor);
-    margin-right: 1%;
-    transition: 0.5s;
-}
-
-.rezerv {
-    background-color: var(--spanColor);
-    color: var(--liHoverColor);
-    transition: 0.5s;
-}
-
-.order:hover,
-.rezerv:hover {
-    transform: 0.4s;
-    transform: scale(1.1);
-    transition: 0s;
-}
-
-.order:hover {
-    background-color: var(--spanColor);
-    color: var(--liHoverColor);
-}
-
-.rezerv:hover {
     background-color: var(--iconColor);
     color: var(--iconHoverColor);
 }
-
-
 
 
 
@@ -326,13 +558,14 @@ nav ul li a {
 #footer {
     width: 100%;
     height: auto;
-    padding:  80px 100px 150px 100px;
+    padding: 80px 100px 150px 100px;
     background-color: var(--bgColor);
     display: flex;
     align-items: center;
     justify-content: space-between;
     transition: 1s;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .footer-logo,
@@ -364,7 +597,17 @@ nav ul li a {
     margin-top: 10px;
 }
 
-.social-media i:hover {
+#linkedin,
+#instagram,
+#twitter,
+#tiktok {
+    color: var(--txtColor);
+}
+
+#linkedin:hover,
+#instagram:hover,
+#twitter:hover,
+#tiktok:hover {
     color: #fb5607;
     cursor: pointer;
     transition: 0.3s;
@@ -387,7 +630,7 @@ nav ul li a {
 }
 
 .footer-contact .contacts {
-    margin-top: 20px;
+    margin-top: 15px;
     line-height: 30px;
     width: 100%;
 }
@@ -401,6 +644,7 @@ nav ul li a {
 .footer-contact p {
     font-size: 18px;
 }
+
 
 .footer-contact .ft-phone,
 .ft-email,
@@ -446,14 +690,14 @@ nav ul li a {
     width: 100%;
 }
 
-.ft-forms input{
-    
+.ft-forms input {
+
     outline: 0;
     padding: 10px;
     font-size: 16px;
 }
 
-.ft-forms button{
+.ft-forms button {
     border: 0;
     outline: 0;
     padding: 14px;
@@ -463,11 +707,61 @@ nav ul li a {
     transition: .5s;
 }
 
-.ft-forms button:hover{
+.ft-forms button:hover {
     transform: scale(1.05);
     transition: .3s;
     cursor: pointer;
 }
+
+
+.input-alert-warning {
+    width: auto;
+    height: 40px;
+    background-color: #b1b400;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-1000px);
+    color: #0b090a;
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.input-alert-success {
+    width: auto;
+    height: 40px;
+    background-color: #548c2f;
+    position: absolute;
+    color: #ffecd1;
+    bottom: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-1000px);
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
+.input-alert-danger {
+    width: auto;
+    height: 40px;
+    background-color: #bf0603;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-1000px);
+    color: var(--txtColor);
+    border-radius: 15px;
+    padding: 10px 15px;
+}
+
 
 
 
@@ -515,16 +809,12 @@ nav ul li a {
     .headerUl,
     .header-info,
     nav,
-    .section-1,
-    .section-2,
-    .section-3,
-    .section-4
-   {
+    #contact {
         padding: 0px 70px;
     }
 
-    #footer{
-        padding:  80px 70px 110px 70px;
+    #footer {
+        padding: 80px 70px 110px 70px;
     }
 }
 
@@ -533,16 +823,12 @@ nav ul li a {
     .headerUl,
     .header-info,
     nav,
-    .section-1,
-    .section-2,
-    .section-3,
-    .section-4
-   {
+    #contact {
         padding: 0px 40px;
     }
 
-    #footer{
-        padding:  80px 40px 80px 40px;
+    #footer {
+        padding: 80px 40px 110px 40px;
     }
 }
 
@@ -551,15 +837,12 @@ nav ul li a {
     .headerUl,
     .header-info,
     nav,
-    .section-1,
-    .section-2,
-    .section-3,
-    .section-4 {
-        padding: 0px 10px;
+    #contact {
+        padding: 0px 20px;
     }
 
-    #footer{
-        padding:  30px 10px 30px 10px;
+    #footer {
+        padding: 80px 20px 110px 20px;
     }
 }
 
@@ -736,8 +1019,680 @@ nav ul li a {
 
 
 
+@media screen and (min-width:1182px) and (max-width:1240px) {
 
 
+
+    #contact {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bgColor);
+        color: var(--txtColor);
+        display: flex;
+        align-items: centere;
+        justify-content: space-between;
+        padding: 0 100px;
+        gap: 20px;
+        transition: 1s;
+    }
+
+
+
+    .contact-us,
+    .job-form {
+        flex-basis: 50%;
+
+    }
+
+
+    .contact-header h1,
+    .job-form-header h1 {
+        font-size: 35px;
+    }
+
+
+
+
+    .contact-telephone p,
+    .contact-email p,
+    .contact-web p,
+    .contact-address p {
+        font-size: 18px;
+    }
+
+
+    .name-surname input:invalid {
+        flex-basis: 48%;
+        padding: 10px 0;
+        outline: none;
+        border: 3px solid #bf0603;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .name-surname input:valid {
+        flex-basis: 48%;
+        padding: 10px 0;
+        outline: none;
+        border-radius: 10px;
+        font-size: 13px;
+        border: 3px solid #38b000;
+    }
+
+
+    .job-form-email-date input:first-child {
+        font-size: 13px;
+    }
+
+
+
+    .job-form-email-date input:last-child:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:last-child:invalid {
+        font-size: 13px;
+    }
+
+
+    .job-form-gender {
+        font-size: 18px;
+    }
+
+
+
+    .gender-labels {
+        flex-basis: 50%;
+    }
+
+    .job-form-gender .male {
+        margin-right: 15px;
+    }
+
+
+    .contact-social-media-header {
+        margin-top: 20px;
+    }
+
+    .contact-social-media-header h3 {
+        font-size: 19px;
+    }
+
+    .contact-social-media-icons {
+        font-size: 30px;
+    }
+
+
+    .profile-picture {
+        flex-basis: 50%;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid var(--txtColor);
+        margin: 0 20px 10px 80px;
+    }
+
+    #textarea {
+        width: 100%;
+        height: 120px;
+        font-size: 16px;
+    }
+
+}
+
+
+
+@media screen and (min-width:580px) and (max-width:1181px) {
+
+
+    #contact {
+        width: 100%;
+        height: auto;
+        background-color: var(--bgColor);
+        color: var(--txtColor);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 1s;
+        flex-wrap: wrap;
+    }
+
+
+
+    .contact-us,
+    .job-form {
+        flex-basis: 100%;
+    }
+
+
+
+
+    .contact-header h1,
+    .job-form-header h1 {
+        font-size: 35px;
+    }
+
+    .contact-telephone,
+    .contact-email,
+    .contact-web,
+    .contact-address {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .contact-telephone p,
+    .contact-email p,
+    .contact-web p,
+    .contact-address p {
+        font-size: 18px;
+    }
+
+
+
+
+    .name-surname input:invalid {
+        flex-basis: 48%;
+        padding: 10px 0;
+        outline: none;
+        border: 3px solid #bf0603;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .name-surname input:valid {
+        flex-basis: 48%;
+        padding: 10px 0;
+        outline: none;
+        border-radius: 10px;
+        font-size: 13px;
+        border: 3px solid #38b000;
+    }
+
+
+    .job-form-email-date input:first-child {
+        font-size: 13px;
+    }
+
+
+
+    .job-form-email-date input:last-child:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:last-child:invalid {
+        font-size: 13px;
+    }
+
+
+    .job-form-gender {
+        font-size: 18px;
+    }
+
+    .gender-labels {
+        flex-basis: 50%;
+    }
+
+    .job-form-gender .male {
+        margin-right: 15px;
+    }
+
+    .contact-social-media-header {
+        display: flex;
+        justify-content: center;
+
+    }
+
+
+    .contact-social-media-header {
+        margin-top: 20px;
+    }
+
+    .contact-social-media-header h3 {
+        font-size: 19px;
+    }
+
+    .contact-social-media-icons {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .profile-picture {
+        flex-basis: 100%;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid var(--txtColor);
+        margin: 0 20px 10px 80px;
+    }
+
+    #textarea {
+        flex-basis: 100%;
+        height: 120px;
+        font-size: 16px;
+    }
+
+    .job-form-gender {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+
+@media screen and (min-width:200px) and (max-width:579px) {
+
+
+    #contact {
+        width: 100%;
+        height: auto;
+        background-color: var(--bgColor);
+        color: var(--txtColor);
+        display: flex;
+        transition: 1s;
+        flex-wrap: wrap;
+    }
+
+
+
+    .contact-us,
+    .job-form {
+        flex-basis: 100%;
+    }
+
+    .contact-body,
+    .job-form-body {
+        flex-basis: 100%;
+    }
+
+
+
+    .contact-header h1,
+    .job-form-header h1 {
+        font-size: 35px;
+    }
+
+    .contact-telephone,
+    .contact-email,
+    .contact-web,
+    .contact-address {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+    .contact-telephone p,
+    .contact-email p,
+    .contact-web p,
+    .contact-address p {
+        font-size: 18px;
+    }
+
+
+    .name-surname {
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .name-surname input:invalid {
+        flex-basis: 100%;
+        padding: 10px 0;
+        outline: none;
+        border: 3px solid #bf0603;
+        border-radius: 10px;
+        font-size: 13px;
+    }
+
+    .name-surname input:valid {
+        flex-basis: 100%;
+        padding: 10px 0;
+        outline: none;
+        border-radius: 10px;
+        font-size: 13px;
+        border: 3px solid #38b000;
+    }
+
+    .job-form-email-date {
+        display: flex;
+        gap: 20px;
+    }
+
+
+    .job-form-email-date input:first-child {
+        flex-basis: 100%;
+        font-size: 13px;
+    }
+
+
+
+    .job-form-email-date input:last-child:valid {
+        flex-basis: 100%;
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:last-child:invalid {
+        flex-basis: 100%;
+        font-size: 13px;
+    }
+
+
+    .job-form-gender {
+        width: 100%;
+        display: flex;
+    }
+
+
+    .job-form-gender {
+        font-size: 18px;
+    }
+
+    .gender-labels {
+        flex-basis: 100%;
+    }
+
+    .job-form-gender .male {
+        margin-right: 15px;
+    }
+
+    .contact-social-media-header {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contact-social-media-header {
+        margin-top: 20px;
+    }
+
+    .contact-social-media-header h3 {
+        font-size: 19px;
+    }
+
+    .contact-social-media-icons {
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .profile-picture {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-picture img {
+        flex-basis: 100%;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 2px solid var(--txtColor);
+        margin: 0;
+    }
+
+    .profile-picture input {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    #textarea {
+        width: 100%;
+        height: 120px;
+        border-radius: 10px;
+        outline: none;
+        font-size: 14px;
+        overflow: auto;
+        resize: none;
+    }
+
+
+    .textarea-length {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .textarea-length p {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 7px;
+        flex-basis: 100%;
+    }
+
+    .job-form-gender {
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+@media screen and (min-width:350px) and (max-width:455px) {
+
+
+    .contact-header h1,
+    .job-form-header h1 {
+        font-size: 27px;
+    }
+
+
+    .contact-telephone p,
+    .contact-email p,
+    .contact-web p,
+    .contact-address p {
+        font-size: 16px;
+    }
+
+
+    .name-surname input:invalid {
+        font-size: 13px;
+    }
+
+    .name-surname input:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:first-child {
+        font-size: 13px;
+    }
+
+
+    .job-form-email-date input:last-child:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:last-child:invalid {
+        font-size: 13px;
+    }
+
+
+    .job-form-gender {
+        font-size: 15px;
+    }
+
+    .contact-social-media-header h3 {
+        font-size: 14px;
+    }
+
+    .contact-social-media-icons {
+        font-size: 28px;
+    }
+
+    #textarea {
+        font-size: 14px;
+    }
+
+
+}
+
+
+@media screen and (min-width:288px) and (max-width:349px) {
+
+
+    .contact-header h1,
+    .job-form-header h1 {
+        font-size: 24px;
+    }
+
+
+    .contact-telephone,
+    .contact-email,
+    .contact-web,
+    .contact-address {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-telephone p,
+    .contact-email p,
+    .contact-web p,
+    .contact-address p {
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+
+    .name-surname input:invalid {
+        font-size: 13px;
+    }
+
+    .name-surname input:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:first-child {
+        font-size: 13px;
+    }
+
+
+    .job-form-email-date input:last-child:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:last-child:invalid {
+        font-size: 13px;
+    }
+
+
+    .job-form-gender {
+        font-size: 17px;
+    }
+
+    .contact-social-media-header h3 {
+        font-size: 11px;
+    }
+
+    .contact-social-media-icons {
+        font-size: 24px;
+    }
+
+
+    .job-form-button {
+        flex-direction: column;
+    }
+
+    .job-form button {
+        padding: 13px 18px;
+
+    }
+}
+
+
+@media screen and (max-width:287px) {
+
+
+    .contact-header h1,
+    .job-form-header h1 {
+        font-size: 24px;
+    }
+
+
+    .contact-telephone,
+    .contact-email,
+    .contact-web,
+    .contact-address {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-telephone p,
+    .contact-email p,
+    .contact-web p,
+    .contact-address p {
+        font-size: 11px;
+        line-height: 30px;
+    }
+
+
+    .name-surname input:invalid {
+        font-size: 13px;
+    }
+
+    .name-surname input:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:first-child {
+        font-size: 13px;
+    }
+
+
+    .job-form-email-date input:last-child:valid {
+        font-size: 13px;
+    }
+
+    .job-form-email-date input:last-child:invalid {
+        font-size: 13px;
+    }
+
+
+    .job-form-gender {
+        font-size: 17px;
+    }
+
+    .contact-social-media-header h3 {
+        font-size: 9px;
+    }
+
+    .contact-social-media-icons {
+        font-size: 20px;
+    }
+
+
+    .job-form-button {
+        flex-direction: column;
+    }
+
+    .job-form button {
+        padding: 13px 18px;
+
+    }
+}
 
 
 
@@ -758,7 +1713,7 @@ nav ul li a {
 
 
 @media screen and (min-width:730px) and (max-width:1211px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -768,20 +1723,22 @@ nav ul li a {
         flex-basis: 50%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 35px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 30px;
     }
-    
+
+
+
 
     .footer-contact p {
         font-size: 18px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -789,9 +1746,9 @@ nav ul li a {
         display: flex;
         align-items: center;
     }
-    
-    
-    
+
+
+
     .footer-subscribe {
         align-items: center;
         color: var(--txtColor);
@@ -801,24 +1758,16 @@ nav ul li a {
         margin-top: 50px;
     }
 
-   
-    
+
     .footer-subscribe p {
         font-size: 18px;
     }
-    
-    
- 
-    
- 
-    
-  
-    
+
 }
 
 
 @media screen and (min-width:400px) and (max-width:729px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -828,24 +1777,24 @@ nav ul li a {
         flex-basis: 100%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 35px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 30px;
     }
 
-    .footer-contact{
+    .footer-contact {
         margin-top: 50px;
     }
-    
+
 
     .footer-contact p {
         font-size: 18px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -853,9 +1802,9 @@ nav ul li a {
         display: flex;
         align-items: center;
     }
-    
-    
-    
+
+
+
     .footer-subscribe {
         align-items: center;
         color: var(--txtColor);
@@ -868,11 +1817,11 @@ nav ul li a {
     .footer-subscribe p {
         font-size: 18px;
     }
-     
+
 }
 
 @media screen and (min-width:260px) and (max-width:399px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -882,24 +1831,24 @@ nav ul li a {
         flex-basis: 100%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 25px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 20px;
     }
 
-    .footer-contact{
+    .footer-contact {
         margin-top: 50px;
     }
-    
+
 
     .footer-contact p {
         font-size: 14px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -909,11 +1858,11 @@ nav ul li a {
     }
 
 
-    .footer-logo h1{
+    .footer-logo h1 {
         font-size: 35px;
     }
-    
-    
+
+
     .footer-subscribe {
         align-items: center;
         color: var(--txtColor);
@@ -927,19 +1876,33 @@ nav ul li a {
         font-size: 14px;
     }
 
-    .footer-subscribe h1{
+    .footer-subscribe h1 {
         font-size: 30px;
     }
 
-    .footer-contact h1{
+    .footer-contact h1 {
         font-size: 30px;
     }
-     
+
+}
+
+@media screen and (max-width:295px) {
+
+    .footer-contact .ft-phone,
+    .ft-email,
+    .ft-location,
+    .ft-domain {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
 }
 
 
 @media screen and (min-width:200px) and (max-width:259px) {
-    
+
     .footer-logo,
     .footer-contact,
     .footer-subscribe {
@@ -949,24 +1912,25 @@ nav ul li a {
         flex-basis: 100%;
     }
 
- 
+
     .footer-logo h1 {
         font-size: 20px;
     }
-    
+
     .footer-logo .social-media {
         font-size: 15px;
     }
 
-    .footer-contact{
-        margin-top: 50px;
+    .footer-contact {
+        margin-top:
+            50px;
     }
-    
+
 
     .footer-contact p {
         font-size: 11px;
     }
-    
+
     .footer-contact .ft-phone,
     .ft-email,
     .ft-location,
@@ -976,26 +1940,106 @@ nav ul li a {
     }
 
 
-    .footer-logo h1{
-        font-size: 25px;
+    .footer-logo h1 {
+        font-size: 20px;
     }
-    
-    
+
+    .footer-subscribe .subscribe{
+        margin-top: 30px;
+    }
+
+
     .footer-subscribe {
-        margin-top: 50px;
+        margin-top: 30px;
+    }
+
+    .footer-subscribe input {
+        width: 80%;
+        margin: auto;
+        font-size: 13px;
+
+    }
+
+    .footer-subscribe button {
+        width: 80%;
+        margin: auto;
+        font-size: 13px;
     }
 
     .footer-subscribe p {
         font-size: 11px;
     }
 
-    .footer-subscribe h1{
+    .footer-subscribe h1 {
         font-size: 20px;
     }
 
-    .footer-contact h1{
+    .footer-contact h1 {
         font-size: 20px;
     }
-     
+
+    .footer-contact .contacts {
+        margin-top: 30px;
+        line-height: 20px;
+    }
 }
 
+
+@media screen and (max-width:445px) {
+    .input-alert-warning {
+        width: auto;
+        height: 40px;
+        padding: 6px 10px;
+        font-size: 13px;
+        z-index: 99999999;
+    }
+
+    .input-alert-success {
+        width: auto;
+        height: 40px;
+        padding: 6px 10px;
+        font-size: 13px;
+        z-index: 99999999;
+    }
+
+    .input-alert-danger {
+        width: auto;
+        height: 40px;
+        padding: 6px 10px;
+        font-size: 13px;
+        z-index: 99999999;
+    }
+
+    .bottom-arrow,
+    .top-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background-color: var(--iconcolor2);
+        position: fixed;
+        bottom: 10px;
+        right: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .5s;
+        z-index: 9999999;
+    }
+
+    .top-arrow:hover,
+    .bottom-arrow:hover {
+        transform: scale(1.2);
+    }
+
+    .top-arrow {
+        bottom: 55px;
+        right: 20px;
+    }
+
+    .bottom-arrow i,
+    .top-arrow i {
+        font-size: 18px;
+        color: #ffecd1;
+    }
+}

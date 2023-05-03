@@ -53,7 +53,7 @@ subsButton.onclick = () => {
     }
 
 
-    else if (subsInput.validity.typeMismatch) {
+    else  if (!subsInput.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
 
         inputSituation(inputWarning, inputSuccess, inputDanger, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Girilən dəyər mail @ tipində olmalıdır !');
 
@@ -461,18 +461,15 @@ faSun.onclick = () => {
     localStorage.setItem('darkModeIcon', faSun.classList)
 }
 
-if (localStorage.getItem('light') === '') {
-    docBody.classList.add(localStorage.getItem('light'))
-    faSun.classList.replace('fa-moon', 'fa-sun')
-
-
+if (localStorage.getItem('light')==='') {
+    // docBody.classList.add(localStorage.getItem('light'))
+    faSun.classList.replace('fa-moon','fa-sun')
 }
 else {
     docBody.classList.add(localStorage.getItem('light'))
     faSun.classList.add('fa-moon')
 
 }
-
 
 
 
