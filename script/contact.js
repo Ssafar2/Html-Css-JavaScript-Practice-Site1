@@ -179,40 +179,17 @@ textArea.addEventListener('input', () => {
 })
 
 
-
-
-let jobFormHeader={
-    origin:'top',
-    distance:'25rem',
-    delay:300,
-    duration:1000
-}
-
-let contactHeader={
-    origin:'top',
-    distance:'25rem',
-    delay:300,
-    duration:1000
-}
-
-ScrollReveal().reveal('.job-form-header',jobFormHeader);
-ScrollReveal().reveal('.contact-header',contactHeader);
-
-
-
-
-
 let contactUs={
     origin:'left',
     distance:'25rem',
-    delay:600,
+    delay:300,
     duration:1000
 }
 
 let jobForm={
     origin:'right',
     distance:'25rem',
-    delay:1200,
+    delay:300,
     duration:1000
 }
 
