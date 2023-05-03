@@ -205,14 +205,14 @@ ScrollReveal().reveal('.menyus', { delay: 3000 });
 
 
 let leftAnimate1={
-    origin:'left',
+    origin:'top',
     distance:'25rem',
     delay:300,
     duration:1000
 }
 
 let rightAnimate1={
-    origin:'right',
+    origin:'bottom',
     distance:'25rem',
     delay:300,
     duration:1000

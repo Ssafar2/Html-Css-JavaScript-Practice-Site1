@@ -187,7 +187,7 @@ let contactUs={
 }
 
 let jobForm={
-    origin:'top',
+    origin:'bottom',
     distance:'25rem',
     delay:300,
     duration:1000
@@ -195,11 +195,6 @@ let jobForm={
 
 ScrollReveal().reveal('.contact-us',contactUs);
 ScrollReveal().reveal('.job-form',jobForm);
-
-
-
-
-
 
 
 
