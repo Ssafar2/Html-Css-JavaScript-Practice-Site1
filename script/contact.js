@@ -37,14 +37,15 @@ const inputSituation = (inputType1, inputType2, inputType3, transform1, tranform
 
 
 subsButton.onclick = () => {
+    let emailRegex = /(^[a-zA-Z]+)([\w0-9]+)?([\.\-\_])?([a-zA-Z]+)([\w0-9]+)?\@([a-zA-Z]+)\.([a-zA-Z]+){2,5}/gi
 
     if (subsInput.value === '' || subsInput.value === null) {
 
         inputSituation(inputSuccess, inputDanger, inputWarning, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Boş dəyər girmək olmaz!');
     }
-    else if (!subsInput.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
+    else if (!subsInput.value.match(emailRegex)) {
 
-        inputSituation(inputWarning, inputSuccess, inputDanger, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Girilən dəyər mail @ tipində olmalıdır !');
+        inputSituation(inputWarning, inputSuccess, inputDanger, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Girilən dəyər mail tipində olmalıdır !');
     }
     else {
 
@@ -88,7 +89,9 @@ else {
 
 contactInputsEmail.onkeyup = () => {
 
-    if (!contactInputsEmail.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
+    let emailRegex = /(^[a-zA-Z]+)([\w0-9]+)?([\.\-\_])?([a-zA-Z]+)([\w0-9]+)?\@([a-zA-Z]+)\.([a-zA-Z]+){2,5}/gi
+
+    if (!contactInputsEmail.value.match(emailRegex)) {
 
         contactInputsEmail.style.border = '3px solid #bf0603'
 
@@ -131,7 +134,7 @@ window.onload = () => {
     contactInputsEmail.value = localStorage.getItem('email');
     contactDate.value = localStorage.getItem('date');
     textArea.value = localStorage.getItem('textarea');
-    textLength.textContent=localStorage.getItem('textLength');
+    textLength.textContent = localStorage.getItem('textLength');
 }
 
 
@@ -147,7 +150,7 @@ resetButton.addEventListener('click', () => {
     contactInputsEmail.value = localStorage.setItem('email', '');
     contactDate.onchange = localStorage.setItem('date', '');
     textArea.value = localStorage.setItem('textarea', '');
-    textLength.textContent=localStorage.setItem('textLength',0);
+    textLength.textContent = localStorage.setItem('textLength', 0);
 })
 
 
@@ -156,8 +159,8 @@ let limit = 150;
 textArea.addEventListener('input', () => {
 
     textLength.textContent = textArea.value.length;
-    localStorage.setItem('textLength',textLength.textContent)
-    
+    localStorage.setItem('textLength', textLength.textContent)
+
     if (textArea.value.length === 150) {
 
         textLength.style.color = '#bf0603'
