@@ -128,10 +128,10 @@
             <div class="job-form-body">
                 <form class="job-form">
                     <div class="name-surname">
-                        <input maxlength="15" minlength="2" type="text" id="name" placeholder="Adınızı girin" required   pattern="[A-zıəöğüşç /A-ZIƏÖĞİŞÇ]{3,15}""
-                        title="Xəta! Girilən dəyər 2 və 15 uzunluq aralığında olmalıdır.">
-                        <input maxlength="15" min="5" type="text" id="surname" placeholder="Soyadınızı girin" required
-                            pattern="[A-zıəöğüşç A-ZIƏÖĞİŞÇ]{5,15}"  title="Xəta! Girilən dəyər 5 və ya 15 hərf aralığında olmalıdır.">
+                        <input type="text" id="name" placeholder="Adınızı girin" required pattern="[a-zA-Z A-üöğəıçş A-ÜÖĞƏIÇŞ]{3,11}"/>
+
+
+                        <input  type="text" id="surname" placeholder="Soyadınızı girin" required  pattern="[a-zA-Z A-üöğəıçş A-ÜÖĞƏIÇŞ]{5,12}">
                     </div>
                     <div class="job-form-email-date">
                         <input type="email" id="contact-email" placeholder="Email adresinizi girin" required>
@@ -166,7 +166,7 @@
 
                     <div class="job-form-button">
                         <button id="contact-button" type="submit">Mesaj Göndər</button>
-                        <button style="color: #fff; background-color: #bf0603;" id="contact-reset-button"
+                        <button id="contact-reset-button"
                             type="reset">Təmizlə</button>
                     </div>
                 </form>

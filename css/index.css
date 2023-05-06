@@ -51,7 +51,7 @@ body {
     --iconColor3: rgb(255, 255, 255);
     --rgbaColor: rgba(255, 255, 255, 0.7);
     --goMenuColorBack: #fb5607;
-
+    --bgColor2:#222333;
 }
 
 body.lightMode {
@@ -70,7 +70,7 @@ body.lightMode {
     --iconColor3: #fb5607;
     --rgbaColor: rgba(11, 9, 10, 0.7);
     --goMenuColorBack: #0b090a;
-
+    --bgColor2:#fff;
 }
 
 
@@ -349,7 +349,7 @@ nav ul li a {
 .section-1 {
     width: 100%;
     height: 100vh;
-    background-color: var(--bgColor);
+    background-color: var(--bgColor2);
     padding: 0 100px;
     transition: 1s;
 }
@@ -437,7 +437,7 @@ nav ul li a {
     width: 100%;
     height: auto;
     padding: 0 100px;
-    background-color: var(--bgColor);
+    background-color: var(--bgColor2);
     padding-bottom: 50px;
     transition: 1s;
 }
@@ -618,7 +618,7 @@ nav ul li a {
     width: 100%;
     height: auto;
     padding: 0 100px;
-    background-color: var(--bgColor);
+    background-color: var(--bgColor2);
     transition: 1s;
 }
 

@@ -17,8 +17,6 @@ const textLength = document.querySelector('.text-length');
 const contactName = document.querySelector('#name');
 const contactsurName = document.querySelector('#surname');
 const contactDate = document.querySelector('#contact-date');
-const contactMale = document.querySelector('#male');
-const contactFemale = document.querySelector('#female');
 
 
 
@@ -43,22 +41,16 @@ subsButton.onclick = () => {
     if (subsInput.value === '' || subsInput.value === null) {
 
         inputSituation(inputSuccess, inputDanger, inputWarning, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Boş dəyər girmək olmaz!');
-
     }
-
-
     else if (!subsInput.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
 
         inputSituation(inputWarning, inputSuccess, inputDanger, 'translateX(-1000px)', 'translateX(0px)', 'Xəta! Girilən dəyər mail @ tipində olmalıdır !');
-
     }
-
     else {
 
         inputSituation(inputWarning, inputDanger, inputSuccess, 'translateX(-1000px)', 'translateX(0px)', 'Abunə olduğunuz üçün təşəkkürlər');
     }
 }
-
 
 
 menuUl.style.maxHeight = '0px'
@@ -87,6 +79,7 @@ if (localStorage.getItem('light') === '') {
     // docBody.classList.add(localStorage.getItem('light'))
     faSun.classList.replace('fa-moon', 'fa-sun')
 }
+
 else {
     docBody.classList.add(localStorage.getItem('light'))
     faSun.classList.add('fa-moon')
@@ -94,7 +87,6 @@ else {
 
 
 contactInputsEmail.onkeyup = () => {
-
 
     if (!contactInputsEmail.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g)) {
 
@@ -107,13 +99,11 @@ contactInputsEmail.onkeyup = () => {
 }
 
 
-
-
 checkProfile.onchange = () => {
+
     profileImg.setAttribute('src', URL.createObjectURL(checkProfile.files[0]))
     localStorage.setItem('profileImg', profileImg.src);
 }
-
 
 
 const inputLocal = (names, type, eTargetValue, localType) => {
@@ -124,11 +114,13 @@ const inputLocal = (names, type, eTargetValue, localType) => {
     });
 }
 
+
 inputLocal(contactName, 'input', contactName.value, 'name');
 inputLocal(contactsurName, 'input', contactsurName.value, 'surname');
 inputLocal(contactInputsEmail, 'input', contactInputsEmail.value, 'email');
 inputLocal(contactDate, 'change', contactDate.value, 'date');
 inputLocal(textArea, 'input', textArea.value, 'textarea');
+
 
 
 
@@ -139,8 +131,8 @@ window.onload = () => {
     contactInputsEmail.value = localStorage.getItem('email');
     contactDate.value = localStorage.getItem('date');
     textArea.value = localStorage.getItem('textarea');
+    textLength.textContent=localStorage.getItem('textLength');
 }
-
 
 
 
@@ -150,15 +142,13 @@ resetButton.addEventListener('click', () => {
     localStorage.setItem('profileImg', profileImg.src);
     textLength.textContent = 0;
     contactInputsEmail.value = '';
-    contactName.value = localStorage.setItem('name', '')
-    contactsurName.value = localStorage.setItem('surname', '')
-    contactInputsEmail.value = localStorage.setItem('email', '')
-    contactDate.onchange = localStorage.setItem('date', '')
-    textArea.value = localStorage.setItem('textarea', '')
+    contactName.value = localStorage.setItem('name', '');
+    contactsurName.value = localStorage.setItem('surname', '');
+    contactInputsEmail.value = localStorage.setItem('email', '');
+    contactDate.onchange = localStorage.setItem('date', '');
+    textArea.value = localStorage.setItem('textarea', '');
+    textLength.textContent=localStorage.setItem('textLength',0);
 })
-
-
-
 
 
 
@@ -166,9 +156,10 @@ let limit = 150;
 textArea.addEventListener('input', () => {
 
     textLength.textContent = textArea.value.length;
-
-
+    localStorage.setItem('textLength',textLength.textContent)
+    
     if (textArea.value.length === 150) {
+
         textLength.style.color = '#bf0603'
     }
     else {
@@ -179,53 +170,50 @@ textArea.addEventListener('input', () => {
 })
 
 
-let contactUs={
-    origin:'left',
-    distance:'25rem',
-    delay:300,
-    duration:1000
+let contactUs = {
+    origin: 'left',
+    distance: '25rem',
+    delay: 300,
+    duration: 1000
 }
 
-let jobForm={
-    origin:'bottom',
-    distance:'25rem',
-    delay:300,
-    duration:1000
+let jobForm = {
+    origin: 'bottom',
+    distance: '25rem',
+    delay: 300,
+    duration: 1000
 }
 
-ScrollReveal().reveal('.contact-us',contactUs);
-ScrollReveal().reveal('.job-form',jobForm);
+ScrollReveal().reveal('.contact-us', contactUs);
+ScrollReveal().reveal('.job-form', jobForm);
 
 
 
 
-let footerLogo={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
+let footerLogo = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 500,
+    duration: 1000
 }
 
-let footerContact={
-    origin:'bottom',
-    distance:'25rem',
-    delay:1000,
-    duration:1000
+let footerContact = {
+    origin: 'bottom',
+    distance: '25rem',
+    delay: 1000,
+    duration: 1000
 }
 
-let footerSubscribe={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
+let footerSubscribe = {
+    origin: 'top',
+    distance: '25rem',
+    delay: 500,
+    duration: 1000
 }
 
-ScrollReveal().reveal('.footer-logo',footerLogo);
-ScrollReveal().reveal('.footer-contact',footerContact);
-ScrollReveal().reveal('.footer-subscribe',footerSubscribe);
-
-
-
+ScrollReveal().reveal('.footer-logo', footerLogo);
+ScrollReveal().reveal('.footer-contact', footerContact);
+ScrollReveal().reveal('.footer-subscribe', footerSubscribe);
 
 
 
@@ -236,7 +224,7 @@ window.addEventListener('scroll', () => {
     const innerWidthNumber = (num1, num2) => {
 
         if (winScrollY > num1) {
-         
+
             document.querySelector('.top-arrow').classList.add('show-top-arrow')
         }
         else {
@@ -254,26 +242,17 @@ window.addEventListener('scroll', () => {
     }
 
 
-    console.log(window.innerWidth);
-
-
     if (window.innerWidth > 970) {
 
         innerWidthNumber(407, 407)
     }
-
-
     else if (window.innerWidth < 970 && window.innerWidth >= 635) {
 
         innerWidthNumber(500, 500)
     }
-
     else if (window.innerWidth < 635) {
 
         innerWidthNumber(600, 600)
-
     }
-
-
 })
 

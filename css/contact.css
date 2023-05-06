@@ -51,7 +51,7 @@ body {
     --iconColor3: rgb(255, 255, 255);
     --rgbaColor: rgba(255, 255, 255, 0.7);
     --goMenuColorBack: #fb5607;
-    --bgColor2:#333;
+    --bgColor2:#222333;
 
 }
 
@@ -303,6 +303,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 
 .contact-header h1,
@@ -351,14 +352,16 @@ nav ul li a {
     flex-wrap: wrap;
 }
 
-.name-surname input:invalid {
+
+
+/* .name-surname input {
     flex-basis: 48%;
     padding: 10px 0;
     outline: none;
-    border: 3px solid #bf0603;
     border-radius: 10px;
     font-size: 15px;
 }
+ */
 
 .name-surname input:valid {
     flex-basis: 48%;
@@ -366,8 +369,18 @@ nav ul li a {
     outline: none;
     border-radius: 10px;
     font-size: 15px;
-    border: 3px solid #38b000;
+    border: 2px solid green;
 }
+
+.name-surname input:invalid {
+    flex-basis: 48%;
+    padding: 10px 0;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    border: 2px solid red;
+}
+
 
 
 
@@ -566,10 +579,15 @@ nav ul li a {
 
 .job-form button:hover {
     cursor: pointer;
-    background-color: var(--iconColor);
-    color: var(--iconHoverColor);
+    background-color: #38b000;
+    color: #fff;
 }
 
+
+#contact-reset-button:hover{
+background-color: #bf0603;
+cursor: pointer;
+}
 
 
 
