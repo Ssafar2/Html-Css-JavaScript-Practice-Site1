@@ -57,7 +57,7 @@ body {
 body.lightMode {
     width: 100%;
     height: 100vh;
-    --bgColor: rgb(255, 255, 255);
+    --bgColor:#f9f6ef;
     --txtColor: #0b090a;
     --navColor: rgba(255, 255, 255, 0.6);
     --iconColor: #fff;
@@ -318,28 +318,17 @@ nav ul li a {
     transition: 0.5s;
 }
 
-.rezerv {
-    background-color: var(--spanColor);
-    color: var(--liHoverColor);
-    transition: 0.5s;
-}
-
-.order:hover,
-.rezerv:hover {
+.order:hover{
     transform: 0.4s;
     transform: scale(1.1);
     transition: 0s;
-}
-
-.order:hover {
     background-color: var(--spanColor);
     color: var(--liHoverColor);
 }
 
-.rezerv:hover {
-    background-color: var(--iconColor);
-    color: var(--iconHoverColor);
-}
+
+
+
 
 
 
@@ -1928,7 +1917,7 @@ nav ul li a {
 
 
     .footer-logo h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .footer-logo .social-media {
@@ -1951,12 +1940,6 @@ nav ul li a {
         display: flex;
         align-items: center;
     }
-
-
-    .footer-logo h1 {
-        font-size: 35px;
-    }
-
 
     .footer-subscribe {
         align-items: center;

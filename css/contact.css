@@ -58,7 +58,7 @@ body {
 body.lightMode {
     width: 100%;
     height: 100vh;
-    --bgColor: rgb(255, 255, 255);
+    --bgColor:#f9f6ef;
     --txtColor: #0b090a;
     --navColor: rgba(255, 255, 255, 0.7);
     --iconColor: #fff;
@@ -1868,7 +1868,7 @@ cursor: pointer;
 
 
     .footer-logo h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .footer-logo .social-media {
@@ -1893,9 +1893,8 @@ cursor: pointer;
     }
 
 
-    .footer-logo h1 {
-        font-size: 35px;
-    }
+
+  
 
 
     .footer-subscribe {

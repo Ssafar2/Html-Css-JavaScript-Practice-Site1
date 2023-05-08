@@ -57,7 +57,7 @@ body {
 body.lightMode {
     width: 100%;
     height: 100vh;
-    --bgColor: rgb(255, 255, 255);
+    --bgColor:#f9f6ef;
     --txtColor: #0b090a;
     --navColor: rgba(255, 255, 255, 0.6);
     --iconColor: #fff;
@@ -1342,7 +1342,7 @@ nav ul li a {
 
 
     .footer-logo h1 {
-        font-size: 25px;
+        font-size: 30px;
     }
 
     .footer-logo .social-media {
@@ -1365,12 +1365,6 @@ nav ul li a {
         display: flex;
         align-items: center;
     }
-
-
-    .footer-logo h1 {
-        font-size: 35px;
-    }
-
 
     .footer-subscribe {
         align-items: center;

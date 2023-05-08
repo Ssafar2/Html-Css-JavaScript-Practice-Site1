@@ -155,7 +155,7 @@ const hamburgerMenu = [
         title: 'Crispy Fish Burger',
         priceDel: '14.99 ₼',
         content: '11.99 ₼',
-        image: '../image-menu/hamburger7.webp'
+        image: '../image-menu/hamburger7.jpg'
     },
     {
         title: 'Double Burger',
@@ -383,7 +383,7 @@ const modalImgs = (typeImg, typeMap, imgModal) => {
                     imgModal.querySelector('img').setAttribute('src', val.image);
                     imgModal.querySelector('h1').textContent = val.title;
                     imgModal.querySelector('p').textContent = val.content;
-                    imgModal.querySelector('span').textContent = val.priceDel;
+                    imgModal.querySelector('span').textContent = val.priceDel;  
                 }
             })
 
@@ -398,6 +398,21 @@ modalImgs(saladImgs, saladMenu, menuImgModal3);
 modalImgs(sandwichImgs, sandwichMenu, menuImgModal4);
 modalImgs(coctailImgs, coctailsMenu, menuImgModal5);
 modalImgs(juiceImgs, juiceMenu, menuImgModal6);
+
+
+
+pizzaImgs.forEach((val,ind)=>{
+    val.addEventListener('click',()=>{
+        pizzaMenu.map((value,index)=>{
+
+            if(ind===index){
+              menuImgModal.querySelector('a').addEventListener('click',()=>{
+                window.open(`./order.html`)
+              })
+            }
+        })        
+    })
+})
 
 
 
