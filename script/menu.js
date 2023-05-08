@@ -407,7 +407,7 @@ pizzaImgs.forEach((val,ind)=>{
 
             if(ind===index){
               menuImgModal.querySelector('a').addEventListener('click',()=>{
-                window.open(`./order.html`)
+                window.open(`./hamburger.html`)
               })
             }
         })        
