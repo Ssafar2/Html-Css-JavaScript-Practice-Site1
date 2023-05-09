@@ -36,102 +36,103 @@ basket.onclick = () => {
 }
 
 
-sendBasket.forEach((value, index) => {
+// sendBasket.forEach((value, index) => {
 
-    const totalPriceBody = document.createElement('div');
-    const total = document.createElement('div');
-    const totalText = document.createElement('p');
-    const totalPrice = document.createElement('p');
-    const totalManatSymbol = document.createElement('p');
-    const button = document.createElement('button');
-
-
-    totalPriceBody.classList.add('total-price-body')
-    total.classList.add('total')
-    totalPrice.classList.add('total-price')
-
-    value.addEventListener('click', () => {
-
-     
-
-        menuLimit.forEach((val, ind) => {
-
-            if (index === ind) {
-                let basketValue = Number(basketCount.textContent) + Number(val.textContent);
-                basketCount.textContent = basketValue;
-            }
-        })
+//     const totalPriceBody = document.createElement('div');
+//     const total = document.createElement('div');
+//     const totalText = document.createElement('p');
+//     const totalPrice = document.createElement('p');
+//     const totalManatSymbol = document.createElement('p');
+//     const button = document.createElement('button');
 
 
-        const basketMenuBody = document.createElement('div')
-        const basketMenuName = document.createElement('div');
-        const basketMenuImg = document.createElement('img');
-        const basketMenuCount = document.createElement('p')
-        const basketMenuPrice = document.createElement('div');
-        const price = document.createElement('p');
-        const manat = document.createElement('p');
-        const xmark = document.createElement('i');
-      
+//     totalPriceBody.classList.add('total-price-body')
+//     total.classList.add('total')
+//     totalPrice.classList.add('total-price')
 
-        basketMenuBody.classList.add('basket-menu-body')
-        basketMenuImg.classList.add('basketMenuImg');
-        basketMenuCount.classList.add('basketMenuCount');
-        basketMenuPrice.classList.add('basketMenuPrice');
-        price.classList.add('price');
-        manat.classList.add('manat');
-        xmark.classList.add('fa-solid');
-        xmark.classList.add('fa-xmark');
-      
-
-        hamburgerMenu.forEach((ham, hamIndex) => {
-            if (index === hamIndex) {
-                menuLimit.forEach((limit, limitIndex) => {
-
-                    if (index === limitIndex) {
-                        basketMenuCount.textContent = limit.textContent;
-
-                        limit.textContent = 1;
-
-                        activePrice.forEach((activeValue, activeIndex) => {
-                            if (index === activeIndex) {
-                                price.textContent = activeValue.textContent;
-                                activeValue.textContent = ham.content;
-                            }
-                        })
-                    }
-                })
-
-                   
-                basketMenuImg.setAttribute('src', ham.image);
-                basketMenuName.textContent = ham.title
-                manat.textContent = '₼';
-                total.textContent='Total:';
-                totalPrice.textContent= (Number(totalPrice.textContent) + Number(price.textContent)).toLocaleString(1);
-                totalManatSymbol.textContent='₼';
-                button.textContent='Sifariş et:'
-
-            }
-        })
+//     value.addEventListener('click', () => {
 
 
-        basketMenuPrice.appendChild(price)
-        basketMenuPrice.appendChild(manat)
-        basketMenuBody.appendChild(basketMenuImg)
-        basketMenuBody.appendChild(basketMenuName)
-        basketMenuBody.appendChild(basketMenuCount)
-        basketMenuBody.appendChild(basketMenuPrice)
-        basketMenuBody.appendChild(xmark)
-        total.appendChild(totalText)
-        total.appendChild(totalPrice)
-        total.appendChild(totalManatSymbol)
-        totalPriceBody.appendChild(total)
-        totalPriceBody.appendChild(button)
-        basketMenu.appendChild(basketMenuBody)
-        basketMenu.appendChild(totalPriceBody)
 
-    })
+//         menuLimit.forEach((val, ind) => {
 
-})
+//             if (index === ind) {
+//                 let basketValue = Number(basketCount.textContent) + Number(val.textContent);
+//                 basketCount.textContent = basketValue;
+//             }
+//         })
+
+
+//         const basketMenuBody = document.createElement('div')
+//         const basketMenuName = document.createElement('div');
+//         const basketMenuImg = document.createElement('img');
+//         const basketMenuCount = document.createElement('p')
+//         const basketMenuPrice = document.createElement('div');
+//         const price = document.createElement('p');
+//         const manat = document.createElement('p');
+//         const xmark = document.createElement('i');
+
+
+//         basketMenuBody.classList.add('basket-menu-body')
+//         basketMenuImg.classList.add('basketMenuImg');
+//         basketMenuCount.classList.add('basketMenuCount');
+//         basketMenuPrice.classList.add('basketMenuPrice');
+//         price.classList.add('price');
+//         manat.classList.add('manat');
+//         xmark.classList.add('fa-solid');
+//         xmark.classList.add('fa-xmark');
+
+
+//         hamburgerMenu.forEach((ham, hamIndex) => {
+//             if (index === hamIndex) {
+//                 menuLimit.forEach((limit, limitIndex) => {
+
+//                     if (index === limitIndex) {
+//                         basketMenuCount.textContent = limit.textContent;
+
+//                         limit.textContent = 1;
+
+//                         activePrice.forEach((activeValue, activeIndex) => {
+//                             if (index === activeIndex) {
+//                                 price.textContent = activeValue.textContent;
+//                                 activeValue.textContent = ham.content;
+//                                 console.log(activeValue.textContent);
+//                             }
+//                         })
+//                     }
+//                 })
+
+
+//                 basketMenuImg.setAttribute('src', ham.image);
+//                 basketMenuName.textContent = ham.title
+//                 manat.textContent = '₼';
+//                 total.textContent = 'Total:';
+//                 totalPrice.textContent = (Number(totalPrice.textContent) + Number(price.textContent)).toLocaleString(1);
+//                 totalManatSymbol.textContent = '₼';
+//                 button.textContent = 'Sifariş et:'
+
+//             }
+//         })
+
+
+//         basketMenuPrice.appendChild(price)
+//         basketMenuPrice.appendChild(manat)
+//         basketMenuBody.appendChild(basketMenuImg)
+//         basketMenuBody.appendChild(basketMenuName)
+//         basketMenuBody.appendChild(basketMenuCount)
+//         basketMenuBody.appendChild(basketMenuPrice)
+//         basketMenuBody.appendChild(xmark)
+//         total.appendChild(totalText)
+//         total.appendChild(totalPrice)
+//         total.appendChild(totalManatSymbol)
+//         totalPriceBody.appendChild(total)
+//         totalPriceBody.appendChild(button)
+//         basketMenu.appendChild(basketMenuBody)
+//         basketMenu.appendChild(totalPriceBody)
+
+//     })
+
+// })
 
 
 
@@ -243,12 +244,14 @@ plusCounter.forEach((value, index) => {
                 activePrice.forEach((activeValue, activeIndex) => {
                     if (ind === activeIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
-                            if (ind === limitIndex)
+                            if (ind === limitIndex) {
                                 if (limit.textContent < 30) {
                                     limit.textContent = +limit.textContent + 1
                                     let plusPriceCount = +activeValue.textContent + val.content;
-                                    activeValue.textContent = plusPriceCount.toLocaleString(1)
+                                    activeValue.textContent = plusPriceCount.toLocaleString(1);
+                                    console.log(activeValue.textContent);
                                 }
+                            }
                         })
                     }
                 })
@@ -271,6 +274,7 @@ minusCounter.forEach((value, index) => {
                                     limit.textContent = +limit.textContent - 1
                                     let minusPriceCount = +activeValue.textContent - val.content;
                                     activeValue.textContent = minusPriceCount.toLocaleString(1)
+                                    console.log(activeValue.textContent);
                                 }
                             }
                         })

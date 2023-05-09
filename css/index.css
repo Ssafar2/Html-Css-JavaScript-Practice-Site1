@@ -311,14 +311,14 @@ nav ul li a {
     padding: 13px 18px;
 }
 
-.order {
+.rezerv {
     background-color: var(--iconColor);
     color: var(--iconHoverColor);
     margin-right: 1%;
     transition: 0.5s;
 }
 
-.order:hover{
+.rezerv:hover{
     transform: 0.4s;
     transform: scale(1.1);
     transition: 0s;
