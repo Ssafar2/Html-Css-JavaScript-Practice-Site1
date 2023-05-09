@@ -19,10 +19,7 @@ const basketCount = document.querySelector('#basket-count');
 const sendBasket = document.querySelectorAll('#send-basket');
 const closeBasketMenu = document.querySelector('#close-basket-menu');
 const basketMenu = document.querySelector('.basket-menu');
-let basketNameArray = [];
-let basketCountArray = [];
-let basketPriceArray = [];
-let basketImgArray = [];
+
 
 
 
@@ -112,18 +109,6 @@ sendBasket.forEach((value, index) => {
                 totalPrice.textContent= (Number(totalPrice.textContent) + Number(price.textContent)).toLocaleString(1);
                 totalManatSymbol.textContent='₼';
                 button.textContent='Sifariş et:'
-
-
-                basketNameArray.push(basketMenuName.textContent)
-                basketPriceArray.push(basketMenuPrice.textContent)
-                basketCountArray.push(basketMenuCount.textContent)
-                basketImgArray.push(basketMenuImg.src)
-
-                localStorage.setItem('basketNameArray', basketNameArray)
-                localStorage.setItem('basketPriceArray', basketPriceArray)
-                localStorage.setItem('basketCountArray', basketCountArray)
-                localStorage.setItem('basketImgArray', basketImgArray)
-
 
             }
         })
