@@ -236,7 +236,7 @@ foodImg.forEach((value, index) => {
 
 
 
-
+/*
 plusCounter.forEach((value, index) => {
     value.addEventListener('click', () => {
         hamburgerMenu.forEach((val, ind) => {
@@ -247,7 +247,7 @@ plusCounter.forEach((value, index) => {
                             if (ind === limitIndex) {
                                 if (limit.textContent < 30) {
                                     limit.textContent = +limit.textContent + 1
-                                    let plusPriceCount = +activeValue.textContent + val.content;
+                                    let plusPriceCount = +activeValue.textContent + +val.content;
                                     activeValue.textContent = +plusPriceCount.toLocaleString(1);
                                 }
                             }
@@ -259,8 +259,32 @@ plusCounter.forEach((value, index) => {
     })
 })
 
+*/
 
+plusCounter.forEach((plus,plusIndex)=>{
+    plus.addEventListener('click',()=>{
+     activePrice.forEach((activePrice,activePriceIndex)=>{
+        if(plusIndex===activePriceIndex){
+            hamburgerMenu.forEach((hamb,hambIndex)=>{
+                if(activePriceIndex===hambIndex){
 
+                    menuLimit.forEach((limit, limitIndex) => {
+                        if (hambIndex === limitIndex) {
+                            if (limit.textContent < 30) {
+                                limit.textContent = +limit.textContent + 1
+                                alert(43)
+                                let activePriceNum=+activePrice.textContent + +hamb.content;
+                                activePrice.textContent= +activePriceNum.toFixed(3);
+                            }
+                        }
+                 
+                    })
+                }
+            })
+        }
+     })
+    })
+})
 
 
 
