@@ -236,7 +236,7 @@ foodImg.forEach((value, index) => {
 
 
 
-/*
+
 plusCounter.forEach((value, index) => {
     value.addEventListener('click', () => {
         hamburgerMenu.forEach((val, ind) => {
@@ -258,23 +258,9 @@ plusCounter.forEach((value, index) => {
         })
     })
 })
-*/
 
-plusCounter.forEach((plus,plusIndex)=>{
-    plus.addEventListener('click',()=>{
-     activePrice.forEach((activePrice,activePriceIndex)=>{
-        if(plusIndex===activePriceIndex){
-            hamburgerMenu.forEach((hamb,hambIndex)=>{
-                if(activePriceIndex===hambIndex){
-                    alert(43)
-                    let activePriceNum=+activePrice.textContent + +hamb.content;
-                    activePrice.textContent= +activePriceNum;
-                }
-            })
-        }
-     })
-    })
-})
+
+
 
 
 
