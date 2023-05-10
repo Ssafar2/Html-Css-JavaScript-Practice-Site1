@@ -267,9 +267,9 @@ plusCounter.forEach((plus,plusIndex)=>{
         if(plusIndex===activePriceIndex){
             hamburgerMenu.forEach((hamb,hambIndex)=>{
                 if(activePriceIndex===hambIndex){
-                    alert(23)
+                    alert(43)
                     let activePriceNum=+activePrice.textContent + +hamb.content;
-                    activePrice.textContent=activePriceNum.toLocaleString(1);
+                    activePrice.textContent= +activePriceNum;
                 }
             })
         }
