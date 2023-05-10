@@ -261,47 +261,19 @@ plusCounter.forEach((value, index) => {
 
 */
 
-plusCounter.forEach((plus,plusIndex)=>{
-    plus.addEventListener('click',()=>{
-     activePrice.forEach((activePrice,activePriceIndex)=>{
-        if(plusIndex===activePriceIndex){
-            hamburgerMenu.forEach((hamb,hambIndex)=>{
-                if(activePriceIndex===hambIndex){
+plusCounter.forEach((plus, plusIndex) => {
+    plus.addEventListener('click', () => {
+        activePrice.forEach((activePrice, activePriceIndex) => {
+            if (plusIndex === activePriceIndex) {
+                hamburgerMenu.forEach((hamb, hambIndex) => {
+                    if (activePriceIndex === hambIndex) {
 
-                    menuLimit.forEach((limit, limitIndex) => {
-                        if (hambIndex === limitIndex) {
-                            if (limit.textContent < 30) {
-                                limit.textContent = +limit.textContent + 1
-                                alert(43)
-                                let activePriceNum=+activePrice.textContent + +hamb.content;
-                                activePrice.textContent= +activePriceNum.toFixed(3);
-                            }
-                        }
-                 
-                    })
-                }
-            })
-        }
-     })
-    })
-})
-
-
-
-
-minusCounter.forEach((value, index) => {
-    value.addEventListener('click', () => {
-        hamburgerMenu.map((val, ind) => {
-            if (index === ind) {
-                activePrice.forEach((activeValue, activeIndex) => {
-                    if (ind === activeIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
-                            if (ind === limitIndex) {
-                                if (limit.textContent > 0) {
-                                    limit.textContent = +limit.textContent - 1
-                                    let minusPriceCount = +activeValue.textContent - val.content;
-                                    activeValue.textContent = minusPriceCount.toLocaleString(1)
-                                    console.log(activeValue.textContent);
+                            if (hambIndex === limitIndex) {
+                                if (limit.textContent < 30) {
+                                    limit.textContent = +limit.textContent + 1
+                                    let activePriceNum = +activePrice.textContent + +hamb.content;
+                                    activePrice.textContent = +activePriceNum.toFixed(3);
                                 }
                             }
                         })
@@ -311,6 +283,31 @@ minusCounter.forEach((value, index) => {
         })
     })
 })
+
+
+minusCounter.forEach((minus, minusIndex) => {
+    minus.addEventListener('click', () => {
+        activePrice.forEach((activePrice, activePriceIndex) => {
+            if (minusIndex === activePriceIndex) {
+                hamburgerMenu.forEach((hamb, hambIndex) => {
+                    if (activePriceIndex === hambIndex) {
+                        menuLimit.forEach((limit, limitIndex) => {
+                            if (hambIndex === limitIndex) {
+                                if (limit.textContent > 0) {
+                                    limit.textContent = +limit.textContent - 1
+                                    let activePriceNum = +activePrice.textContent - +hamb.content;
+                                    activePrice.textContent = +activePriceNum.toFixed(3);
+                                }
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    })
+})
+
+
 
 
 
