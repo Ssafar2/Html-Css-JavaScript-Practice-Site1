@@ -248,8 +248,7 @@ plusCounter.forEach((value, index) => {
                                 if (limit.textContent < 30) {
                                     limit.textContent = +limit.textContent + 1
                                     let plusPriceCount = +activeValue.textContent + val.content;
-                                    activeValue.textContent = plusPriceCount.toLocaleString(1);
-                                    console.log(activeValue.textContent);
+                                    activeValue.textContent = +plusPriceCount.toLocaleString(1);
                                 }
                             }
                         })
@@ -259,6 +258,8 @@ plusCounter.forEach((value, index) => {
         })
     })
 })
+
+
 
 
 
