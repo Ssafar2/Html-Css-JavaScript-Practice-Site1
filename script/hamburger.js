@@ -7,6 +7,7 @@ const subsButton = document.querySelector('#subscribe-button');
 const inputWarning = document.querySelector('.input-alert-warning');
 const inputSuccess = document.querySelector('.input-alert-success');
 const inputDanger = document.querySelector('.input-alert-danger');
+
 const plusCounter = document.querySelectorAll('.plus-counter');
 const minusCounter = document.querySelectorAll('.minus-counter');
 let activePrice = document.querySelectorAll('.active-price');
@@ -14,127 +15,301 @@ let menuLimit = document.querySelectorAll('.menu-limit');
 const foodImg = document.querySelectorAll('.food-img img')
 const foodH1 = document.querySelectorAll('.food-h1');
 const foodDel = document.querySelectorAll('.food-price del');
+const foodCard = document.querySelectorAll('.food-card')
+
 const basket = document.querySelector('#basket');
 const basketCount = document.querySelector('#basket-count');
 const sendBasket = document.querySelectorAll('#send-basket');
 const closeBasketMenu = document.querySelector('#close-basket-menu');
 const basketMenu = document.querySelector('.basket-menu');
+// const basketMenuBody = document.querySelector('.basket-menu-body')
+// const basketMenuImg = document.querySelector('.basket-menu-body img');
+// const basketMenuName = document.querySelector('.basketMenuName');
+// const basketMenuCount = document.querySelector('.basketMenuCount');
+// const price = document.querySelector('.price');
+// const manat = document.querySelector('.manat');
+// const basketMenuPricePar = document.querySelector('.basketMenuPrice p');
+// const basketMenuPriceXmark = document.querySelector('.basket-menu-body i');
+const totalPrice = document.querySelector('#total-price');
+const totalPriceBody = document.querySelector('.total-price-body');
+const foodPayOrder = document.querySelectorAll('#take-order');
+const clearBasketMenu = document.querySelector('#clearBasket');
+const payOrder = document.querySelector('#pay-order');
+let activePriceArray = [];
+
+
+const hamburgerMenu = [
+    {
+        title: 'Angus Burger',
+        priceDel: '12.99 ₼',
+        content: 8.99,
+        image: '../image-menu/hamburger1.jpg',
+        count: 1,
+    },
+    {
+        title: 'Bufalo Burger',
+        priceDel: '14.99 ₼',
+        content: 9.99,
+        image: '../image-menu/hamburger2.jpg',
+        count: 1,
+    },
+    {
+        title: 'Cheesburger',
+        priceDel: '6.99 ₼',
+        content: 4.99,
+        image: '../image-menu/hamburger3.jpg',
+        count: 1,
+    },
+    {
+        title: 'Veggie Burger',
+        priceDel: '7.99 ₼',
+        content: 6.99,
+        image: '../image-menu/hamburger4.jpg',
+        count: 1,
+    },
+    {
+        title: 'Bean Burger',
+        priceDel: '10.99 ₼',
+        content: 8.99,
+        image: '../image-menu/hamburger5.jpg',
+        count: 1,
+    },
+    {
+        title: 'Chicken Burger',
+        priceDel: '7.99 ₼',
+        content: 4.99,
+        image: '../image-menu/hamburger6.jpg',
+        count: 1,
+    },
+    {
+        title: 'Crispy Fish Burger',
+        priceDel: '14.99 ₼',
+        content: 11.99,
+        image: '../image-menu/hamburger7.jpg',
+        count: 1,
+    },
+    {
+        title: 'Double Burger',
+        priceDel: '16.99 ₼',
+        content: 10.99,
+        image: '../image-menu/hamburger8.webp',
+        count: 1,
+    }
+]
 
 
 
 
 
-basketMenu.style.right = '-400px'
-closeBasketMenu.onclick = () => {
-    basketMenu.style.right = '-400px';
-    basketMenu.style.transition = '1s';
+
+//*****************************! ADD TO BASKET  *************************/
+
+sendBasket.forEach((send, sendIndex) => {
+
+    hamburgerMenu.forEach((hamb, hambIndex) => {
+
+        send.addEventListener('click', () => {
+
+            if (hambIndex === sendIndex) {
+
+                menuLimit.forEach((limit, limitIndex) => {
+
+                    if (limitIndex === sendIndex) {
+
+                        activePrice.forEach((activePriceValue, activePriceIndex) => {
+
+                            if (activePriceIndex === sendIndex) {
+
+                                createBasketMenuUI(hamb, limit, activePriceValue);
+                            }
+                        })
+
+                    }
+                })
+            }
+        })
+    })
+
+})
+
+
+
+//*****************************! SHOW BASKET STORAGE  *************************/
+
+window.onload = () => {
+
+    totalPrice.textContent = localStorage.getItem('totalPrice');
+    basketCount.textContent = localStorage.getItem('basketCount');
+
+    checkBasketPriceFromStorage();
+    checkBasketMenuFromStorage();
+
+    checkedMenu.forEach((value, index) => {
+        activePriceArray.forEach((val, ind) => {
+
+            if (index === ind) {
+
+                const createBasketMenuBody = document.createElement('div');
+                createBasketMenuBody.classList.add('basket-menu-body')
+                createBasketMenuBody.innerHTML =
+
+                    `
+                        <img src=${value.image}>
+                        <p class="basketMenuName">${value.title}</p>
+                        <p class="basketMenuCount">${value.count}</p>
+                        <div class="basketMenuPrice">
+                            <p class="price">${val}</p>
+                            <p class="manat">₼</p>
+                        </div>
+    
+                      `
+
+                basketMenu.insertBefore(createBasketMenuBody, totalPriceBody);
+
+                clearBasketMenu.addEventListener('click', () => {
+                    
+                    createBasketMenuBody.remove();
+                })
+            }
+        })
+    })
+
 }
 
-basket.onclick = () => {
-    basketMenu.style.right = '0';
-    basketMenu.style.transition = '1s';
+
+
+
+//*****************************! SHOW BASKET UI  *************************/
+
+const createBasketMenuUI = (hamb, limit, activePriceValue) => {
+
+    const createBasketMenuBody = document.createElement('div');
+    createBasketMenuBody.classList.add('basket-menu-body')
+    createBasketMenuBody.innerHTML =
+
+        `
+        <img src=${hamb.image}>
+        <p class="basketMenuName">${hamb.title}</p>
+        <p class="basketMenuCount">${hamb.count}</p>
+        <div class="basketMenuPrice">
+            <p class="price">${activePriceValue.textContent}</p>
+            <p class="manat">₼</p>
+        </div>
+
+    `
+
+
+    checkBasketMenuFromStorage();
+
+    checkedMenu.push(hamb)
+    localStorage.setItem('basketMenu', JSON.stringify(checkedMenu))
+
+    activePriceArray.push(activePriceValue.textContent)
+    localStorage.setItem('activePrice', JSON.stringify(activePriceArray))
+
+    totalPrice.textContent = (Number(totalPrice.textContent) + Number(activePriceValue.textContent)).toFixed(2);
+    localStorage.setItem('totalPrice', totalPrice.textContent);
+
+    limit.textContent = 1;
+    hamb.count = 1;
+    activePriceValue.textContent = hamb.content;
+    basketMenu.insertBefore(createBasketMenuBody, totalPriceBody);
+    basketCount.textContent = +basketCount.textContent + 1;
+    localStorage.setItem('basketCount', basketCount.textContent);
+
+    clearBasketMenu.addEventListener('click', () => {
+
+        createBasketMenuBody.remove();
+    })
+
+
+
 }
 
 
-// sendBasket.forEach((value, index) => {
 
-//     const totalPriceBody = document.createElement('div');
-//     const total = document.createElement('div');
-//     const totalText = document.createElement('p');
-//     const totalPrice = document.createElement('p');
-//     const totalManatSymbol = document.createElement('p');
-//     const button = document.createElement('button');
+//*****************************! CLEAR BUTTON  *************************/
 
+clearBasketMenu.addEventListener('click', () => {
 
-//     totalPriceBody.classList.add('total-price-body')
-//     total.classList.add('total')
-//     totalPrice.classList.add('total-price')
+    if (totalPrice.textContent == 0) {
+        alert('Xəta! Təmizləmək üçün səbətinizdə məhsul mövcud olmalıdır..');
+    }
+    basketCount.textContent = 0;
 
-//     value.addEventListener('click', () => {
+    checkBasketMenuFromStorage();
 
+    checkedMenu = [];
+    localStorage.setItem('basketMenu', JSON.stringify(checkedMenu));
 
+    activePriceArray = [];
+    localStorage.setItem('activePrice', JSON.stringify(activePriceArray));
 
-//         menuLimit.forEach((val, ind) => {
-
-//             if (index === ind) {
-//                 let basketValue = Number(basketCount.textContent) + Number(val.textContent);
-//                 basketCount.textContent = basketValue;
-//             }
-//         })
+    totalPrice.textContent = 0;
+    localStorage.setItem('totalPrice', totalPrice.textContent)
 
 
-//         const basketMenuBody = document.createElement('div')
-//         const basketMenuName = document.createElement('div');
-//         const basketMenuImg = document.createElement('img');
-//         const basketMenuCount = document.createElement('p')
-//         const basketMenuPrice = document.createElement('div');
-//         const price = document.createElement('p');
-//         const manat = document.createElement('p');
-//         const xmark = document.createElement('i');
+    basketCount.textContent = 0;
+    localStorage.setItem('basketCount', basketCount.textContent);
+})
 
 
-//         basketMenuBody.classList.add('basket-menu-body')
-//         basketMenuImg.classList.add('basketMenuImg');
-//         basketMenuCount.classList.add('basketMenuCount');
-//         basketMenuPrice.classList.add('basketMenuPrice');
-//         price.classList.add('price');
-//         manat.classList.add('manat');
-//         xmark.classList.add('fa-solid');
-//         xmark.classList.add('fa-xmark');
 
 
-//         hamburgerMenu.forEach((ham, hamIndex) => {
-//             if (index === hamIndex) {
-//                 menuLimit.forEach((limit, limitIndex) => {
-
-//                     if (index === limitIndex) {
-//                         basketMenuCount.textContent = limit.textContent;
-
-//                         limit.textContent = 1;
-
-//                         activePrice.forEach((activeValue, activeIndex) => {
-//                             if (index === activeIndex) {
-//                                 price.textContent = activeValue.textContent;
-//                                 activeValue.textContent = ham.content;
-//                                 console.log(activeValue.textContent);
-//                             }
-//                         })
-//                     }
-//                 })
 
 
-//                 basketMenuImg.setAttribute('src', ham.image);
-//                 basketMenuName.textContent = ham.title
-//                 manat.textContent = '₼';
-//                 total.textContent = 'Total:';
-//                 totalPrice.textContent = (Number(totalPrice.textContent) + Number(price.textContent)).toLocaleString(1);
-//                 totalManatSymbol.textContent = '₼';
-//                 button.textContent = 'Sifariş et:'
+//*****************************! PAY-ORDER SECTION  *************************/
 
-//             }
-//         })
+payOrder.addEventListener('click', () => {
+
+    if (totalPrice.textContent == 0) {
+        alert('Xəta! Sifariş etmək üçün səbətinizdə məhsul mövcud olmalıdır..');
+    }
+})
 
 
-//         basketMenuPrice.appendChild(price)
-//         basketMenuPrice.appendChild(manat)
-//         basketMenuBody.appendChild(basketMenuImg)
-//         basketMenuBody.appendChild(basketMenuName)
-//         basketMenuBody.appendChild(basketMenuCount)
-//         basketMenuBody.appendChild(basketMenuPrice)
-//         basketMenuBody.appendChild(xmark)
-//         total.appendChild(totalText)
-//         total.appendChild(totalPrice)
-//         total.appendChild(totalManatSymbol)
-//         totalPriceBody.appendChild(total)
-//         totalPriceBody.appendChild(button)
-//         basketMenu.appendChild(basketMenuBody)
-//         basketMenu.appendChild(totalPriceBody)
-
-//     })
-
-// })
 
 
+//*****************************! CHECK BASKET MENU STORAGE  *************************/
+
+const checkBasketMenuFromStorage = () => {
+
+    if (localStorage.getItem('basketMenu') === null) {
+        checkedMenu = [];
+    }
+    else {
+        checkedMenu = JSON.parse(localStorage.getItem('basketMenu'));
+    }
+
+    return checkedMenu;
+}
+
+
+
+//*****************************! CHECK ACTIVE PRICE STORAGE  *************************/
+
+const checkBasketPriceFromStorage = () => {
+
+    if (localStorage.getItem('activePrice') === null) {
+        activePriceArray = [];
+    }
+    else {
+        activePriceArray = JSON.parse(localStorage.getItem('activePrice'));
+    }
+
+    return activePriceArray;
+}
+
+
+
+
+
+
+
+
+
+
+//*****************************! MENU SLIDER  *************************/
 
 
 
@@ -157,58 +332,23 @@ var swiper = new Swiper(".mySwiper", {
 
 
 
-const hamburgerMenu = [
-    {
-        title: 'Angus Burger',
-        priceDel: '12.99 ₼',
-        content: 8.99,
-        image: '../image-menu/hamburger1.jpg'
-    },
-    {
-        title: 'Bufalo Burger',
-        priceDel: '14.99 ₼',
-        content: 9.99,
-        image: '../image-menu/hamburger2.jpg'
-    },
-    {
-        title: 'Cheesburger',
-        priceDel: '6.99 ₼',
-        content: 4.99,
-        image: '../image-menu/hamburger3.jpg'
-    },
-    {
-        title: 'Veggie Burger',
-        priceDel: '7.99 ₼',
-        content: 6.99,
-        image: '../image-menu/hamburger4.jpg'
-    },
-    {
-        title: 'Bean Burger',
-        priceDel: '10.99 ₼',
-        content: 8.99,
-        image: '../image-menu/hamburger5.jpg'
-    },
-    {
-        title: 'Chicken Burger',
-        priceDel: '7.99 ₼',
-        content: 4.99,
-        image: '../image-menu/hamburger6.jpg'
-    },
-    {
-        title: 'Crispy Fish Burger',
-        priceDel: '14.99 ₼',
-        content: 11.99,
-        image: '../image-menu/hamburger7.jpg'
-    },
-    {
-        title: 'Double Burger',
-        priceDel: '16.99 ₼',
-        content: 10.99,
-        image: '../image-menu/hamburger8.webp'
-    }
-]
+//*****************************! BASKET BAR  *************************/
+
+basketMenu.style.right = '-400px'
+closeBasketMenu.onclick = () => {
+    basketMenu.style.right = '-400px';
+    basketMenu.style.transition = '1s';
+}
+
+basket.onclick = () => {
+    basketMenu.style.right = '0';
+    basketMenu.style.transition = '1s';
+}
 
 
+
+
+//*****************************! CARD INFORMATION  *************************/
 
 foodH1.forEach((value, index) => {
     hamburgerMenu.map((val, ind) => {
@@ -234,32 +374,17 @@ foodImg.forEach((value, index) => {
     })
 })
 
-
-
-/*
-plusCounter.forEach((value, index) => {
-    value.addEventListener('click', () => {
-        hamburgerMenu.forEach((val, ind) => {
-            if (index === ind) {
-                activePrice.forEach((activeValue, activeIndex) => {
-                    if (ind === activeIndex) {
-                        menuLimit.forEach((limit, limitIndex) => {
-                            if (ind === limitIndex) {
-                                if (limit.textContent < 30) {
-                                    limit.textContent = +limit.textContent + 1
-                                    let plusPriceCount = +activeValue.textContent + +val.content;
-                                    activeValue.textContent = +plusPriceCount.toLocaleString(1);
-                                }
-                            }
-                        })
-                    }
-                })
-            }
-        })
+menuLimit.forEach((value, index) => {
+    hamburgerMenu.map((val, ind) => {
+        index === ind ? value.textContent = val.count : value.textContent
     })
 })
 
-*/
+
+
+
+
+//*****************************! PLUS COUNTER  *************************/
 
 plusCounter.forEach((plus, plusIndex) => {
     plus.addEventListener('click', () => {
@@ -267,22 +392,32 @@ plusCounter.forEach((plus, plusIndex) => {
             if (plusIndex === activePriceIndex) {
                 hamburgerMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
-
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
-                                if (limit.textContent < 30) {
-                                    limit.textContent = +limit.textContent + 1
+                                if (hamb.count < 30) {
+
+                                    hamb.count = hamb.count + 1
+                                    limit.textContent = hamb.count;
+
+
                                     let activePriceNum = +activePrice.textContent + +hamb.content;
                                     activePrice.textContent = +activePriceNum.toFixed(3);
                                 }
+
                             }
                         })
+
                     }
                 })
             }
         })
     })
 })
+
+
+//*****************************! MINUS COUNTER   *************************/
+
+
 
 
 minusCounter.forEach((minus, minusIndex) => {
@@ -293,13 +428,20 @@ minusCounter.forEach((minus, minusIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
-                                if (limit.textContent > 0) {
-                                    limit.textContent = +limit.textContent - 1
+                                if (hamb.count > 1) {
+
+                                    hamb.count = hamb.count - 1
+                                    limit.textContent = hamb.count;
+
+
+
                                     let activePriceNum = +activePrice.textContent - +hamb.content;
                                     activePrice.textContent = +activePriceNum.toFixed(3);
                                 }
+
                             }
                         })
+
                     }
                 })
             }
@@ -309,9 +451,36 @@ minusCounter.forEach((minus, minusIndex) => {
 
 
 
+// minusCounter.forEach((minus, minusIndex) => {
+//     minus.addEventListener('click', () => {
+//         activePrice.forEach((activePrice, activePriceIndex) => {
+//             if (minusIndex === activePriceIndex) {
+//                 hamburgerMenu.forEach((hamb, hambIndex) => {
+//                     if (activePriceIndex === hambIndex) {
+//                         menuLimit.forEach((limit, limitIndex) => {
+//                             if (hambIndex === limitIndex) {
+//                                 if (limit.textContent > 1) {
+//                                     limit.textContent = +limit.textContent - 1
+//                                     let activePriceNum = +activePrice.textContent - +hamb.content;
+//                                     activePrice.textContent = +activePriceNum.toFixed(3);
+//                                 }
+//                             }
+//                         })
+//                     }
+//                 })
+//             }
+//         })
+//     })
+// })
 
 
 
+
+
+
+
+
+//*****************************! SUBSCRIBE BUTTON VALIDATION *************************/
 
 const inputSituation = (inputType1, inputType2, inputType3, transform1, tranform2, inputContent) => {
     inputType1.style.transform = transform1;
@@ -326,6 +495,7 @@ const inputSituation = (inputType1, inputType2, inputType3, transform1, tranform
         inputType3.style.transform = transform1;
     }, 3000);
 }
+
 
 
 subsButton.onclick = () => {
@@ -346,7 +516,7 @@ subsButton.onclick = () => {
 }
 
 
-
+//*****************************! MENU BAR *************************/
 
 menuUl.style.maxHeight = '0px'
 faBars.onclick = () => {
@@ -361,6 +531,8 @@ faBars.onclick = () => {
     }
 }
 
+
+//*****************************! DARK MODE *************************/
 
 faSun.onclick = () => {
 
@@ -381,6 +553,8 @@ else {
 
 
 
+
+//*****************************! WINDOW SCROLL *************************/
 
 window.addEventListener('scroll', () => {
 
@@ -423,3 +597,7 @@ window.addEventListener('scroll', () => {
         innerWidthNumber(537, 6649)
     }
 })
+
+
+
+

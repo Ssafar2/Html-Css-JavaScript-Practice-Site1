@@ -91,6 +91,7 @@
                 </div>
 
             </div>
+
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
@@ -113,37 +114,63 @@
         <div class="basket-menu">
             <div class="basket-menu-header">
                 <h3>Səbətiniz</h3>
-                <i id="close-basket-menu" class="fa-solid fa-xmark"></i>
+                <p id="close-basket-menu">X</p>
             </div>
 
-           
 
+
+    <!-- <div class="basket-menu-body">
+        <img src="#">
+        <p class="basketMenuName"></p>
+        <p class="basketMenuCount"></p>
+        <div class="basketMenuPrice">
+            <p class="price"></p>
+            <p class="manat">₼</p>
+        </div>
+        
+        <i class="fa-solid fa-xmark"></i>
+    </div> -->
+
+
+
+            <div class="total-price-body">
+                <div class="total">
+                    <p>Toplam:</p>
+                    <p id="total-price">0</p>
+                    <p>₼</p>
+                </div>
+
+                <div class="price-button">
+                    <button id="pay-order" type="button">Sifariş et</button>
+                    <button id="clearBasket" type="button">Təmizlə</button>
+                </div>
+            </div>
         </div>
 
         <div class="food-card">
             <div class="food-img">
-                <img src="../image-menu/hamburger5.jpg" alt="hamburger1">
+                <img id="food-img" src="../image-menu/hamburger1.jpg" alt="hamburger1">
             </div>
 
             <div class="food-header">
-                <h1 class="food-h1">Chicken Hamburger</h1>
+                <h1 id="food-h1" class="food-h1">Angus Burger</h1>
             </div>
 
             <div class="food-price">
-                <p><del>6.99 ₼</del></p>
-                <p class="active-price">5.99</p>
+                <p><del>12.99 ₼</del></p>
+                <p id="active-price" class="active-price">8.99</p>
                 <span>₼</span>
             </div>
 
             <div class="food-count">
                 <div class="plus-counter">+</div>
-                <div class="menu-limit">1</div>
+                <div id="menu-limit" class="menu-limit">1</div>
                 <div class="minus-counter">-</div>
             </div>
 
             <div class="food-pay">
-                <button type="button">Sifariş et</button>
-                <button id="send-basket" type="button">Səbətə at</button>
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="0">Səbətə at</button>
             </div>
 
         </div>
@@ -151,31 +178,35 @@
 
         <div class="food-card">
             <div class="food-img">
-                <img src="../image-menu/hamburger5.jpg" alt="hamburger2">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
             </div>
 
             <div class="food-header">
-                <h1 class="food-h1">Chicken Hamburger</h1>
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
             </div>
 
             <div class="food-price">
-                <p><del>6.99 ₼</del></p>
-                <p class="active-price">5.99</p>
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
                 <span>₼</span>
             </div>
 
             <div class="food-count">
                 <div class="plus-counter">+</div>
-                <div class="menu-limit">1</div>
+                <div id="menu-limit" class="menu-limit">1</div>
                 <div class="minus-counter">-</div>
             </div>
 
             <div class="food-pay">
-                <button type="button">Sifariş et</button>
-                <button id="send-basket" type="button">Səbətə at</button>
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
             </div>
 
         </div>
+
+
+
+
 
 
 
@@ -281,6 +312,8 @@
         </div>
 
     </footer>
+
+
 
 
 

@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Petrona&display=swap');
 
 
-
 *,
 *::after,
 *::before {
@@ -417,6 +416,9 @@ body {
 }
 
 
+
+
+
 .basket-menu {
     width: 400px;
     height: 100vh;
@@ -457,7 +459,10 @@ body {
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid var(--txtColor);
+ 
 }
+
+
 
 .basket-menu-body img {
     flex-basis: 25%;
@@ -480,16 +485,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 5px;
-
 }
 
-.basket-menu-body .fa-xmark {
-    color: var(--txtColor);
-    font-size: 20px;
+.price-button{
+display: flex;
+gap: 10px;
+}
 
+#clearBasket{
+   background-color: #bf0603;
+   color: #fafaff;
+}
+
+
+#close-basket-menu {
+    color: #bf0603;
     cursor: pointer;
+    font-weight: 900;
+    font-size: 40px;
 }
 
 
@@ -539,12 +553,6 @@ body {
     padding: 0px 0px 10px 0;
 }
 
-.food-card:nth-child(5),
-.food-card:nth-child(6),
-.food-card:nth-child(7),
-.food-card:nth-child(8) {
-    margin-top: 20px;
-}
 
 .food-img {
     width: 100%;
@@ -890,12 +898,10 @@ body {
         border: 1px solid var(--txtColor);
         border-radius: 15px;
         padding: 0px 0px 10px 0;
-    }
-
-    .food-card:nth-child(3),
-    .food-card:nth-child(4) {
         margin-top: 20px;
     }
+
+    
 
     .food-img {
         width: 100%;
@@ -965,11 +971,9 @@ body {
         border: 1px solid var(--txtColor);
         border-radius: 15px;
         padding: 0px 0px 10px 0;
-    }
-
-    .food-card {
         margin-top: 20px;
     }
+
 
     .food-img {
         width: 100%;
