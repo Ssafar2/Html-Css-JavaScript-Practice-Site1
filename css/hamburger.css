@@ -51,6 +51,7 @@ body {
     --iconcolor2: #fb5607;
     --iconColor3: rgb(255, 255, 255);
     --rgbaColor: rgba(255, 255, 255, 0.7);
+    --rgbaColor2: rgba(11, 9, 10, 0.7);
     --goMenuColorBack: #fb5607;
     --bgColor2: #222333;
 
@@ -71,6 +72,7 @@ body.lightMode {
     --iconcolor2: #0b090a;
     --iconColor3: #fb5607;
     --rgbaColor: rgba(11, 9, 10, 0.7);
+    --rgbaColor2: rgba(255, 255, 255, 0.7);
     --goMenuColorBack: #0b090a;
     --bgColor2: #d2d4c8;
 }
@@ -156,7 +158,7 @@ body.lightMode {
     margin-right: 10px;
     color: var(--spanColor);
     position: fixed;
-    z-index: 99;
+    z-index: 99999999999;
 }
 
 .headerUlLeft i:hover {
@@ -459,7 +461,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid var(--txtColor);
- 
+
 }
 
 
@@ -488,14 +490,14 @@ body {
     gap: 5px;
 }
 
-.price-button{
-display: flex;
-gap: 10px;
+.price-button {
+    display: flex;
+    gap: 10px;
 }
 
-#clearBasket{
-   background-color: #bf0603;
-   color: #fafaff;
+#clearBasket {
+    background-color: #bf0603;
+    color: #fafaff;
 }
 
 
@@ -551,6 +553,13 @@ gap: 10px;
     border: 1px solid var(--txtColor);
     border-radius: 15px;
     padding: 0px 0px 10px 0;
+}
+
+.food-card:nth-child(3),
+.food-card:nth-child(4),
+.food-card:nth-child(5),
+.food-card:nth-child(6) {
+    margin-bottom: 25px;
 }
 
 
@@ -692,6 +701,200 @@ gap: 10px;
 
 
 
+#payModal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 999999999;
+    display: none;
+}
+
+.payBox {
+    width: 42%;
+    height: 42%;
+    position: fixed;
+    background-color: var(--rgbaColor2);
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.payHeader {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.payHeader h2 {
+    font-size: 35px;
+    color: var(--txtColor);
+    transition: .5s;
+}
+
+.payHeader h3 {
+    font-size: 35px;
+    cursor: pointer;
+    color: #bf0603;
+    font-weight: 900;
+}
+
+.payBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    color: var(--txtColor);
+}
+
+.payBody p:first-child {
+    font-size: 25px;
+    color: var(--txtColor);
+    margin-right: 10px;
+}
+
+.payBody p:nth-child(2),
+.payBody p:nth-child(3) {
+    font-size: 30px;
+    color: #bf0603;
+    font-weight: 900;
+}
+
+.order-button-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#order {
+    outline: 0;
+    border: 0;
+    background-color: #548c2f;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:850px) and (max-width:1000px) {
+
+    .payHeader h2 {
+        font-size: 30px;
+    }
+
+    .payHeader h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width:400px) and (max-width:849px) {
+
+    .payBox {
+        width: 80%;
+        height: 38%;
+    }
+
+    .payHeader h2 {
+        font-size: 25px;
+    }
+
+    .payHeader h3 {
+        font-size: 25px;
+    }
+
+    .payBody p:first-child {
+        font-size: 20px;
+    }
+
+    .payBody p:nth-child(2),
+    .payBody p:nth-child(3) {
+        font-size: 20px;
+    }
+
+    #order {
+
+        padding: 10px 15px;
+        font-size: 18px;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:399px) {
+
+    .payBox {
+        width: 80%;
+        height: 34%;
+    }
+
+    .payHeader h2 {
+        font-size: 20px;
+    }
+
+    .payHeader h3 {
+        font-size: 20px;
+    }
+
+    .payBody p:first-child {
+        font-size: 17px;
+    }
+
+    .payBody p:nth-child(2),
+    .payBody p:nth-child(3) {
+        font-size: 17px;
+    }
+
+    #order {
+
+        padding: 9px 13px;
+        font-size: 15px;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:319px) {
+
+    .payBox {
+        width: 80%;
+        height: 34%;
+    }
+
+    .payHeader h2 {
+        font-size: 15px;
+    }
+
+    .payHeader h3 {
+        font-size: 15px;
+    }
+
+    .payBody p:first-child {
+        font-size: 13px;
+    }
+
+    .payBody p:nth-child(2),
+    .payBody p:nth-child(3) {
+        font-size: 13px;
+    }
+
+    #order {
+
+        padding: 6px 10px;
+        font-size: 13px;
+        margin-top: 25px;
+    }
+}
 
 
 
@@ -720,7 +923,6 @@ gap: 10px;
 }
 
 @media screen and (max-width:550px) {
-
 
     #header {
         width: 100%;
@@ -798,8 +1000,6 @@ gap: 10px;
     }
 }
 
-
-
 @media screen and (min-width:1111px) and (max-width:1270px) {
 
     .food-h1 {
@@ -807,9 +1007,7 @@ gap: 10px;
     }
 }
 
-
 @media screen and (min-width:950px) and (max-width:1110px) {
-
 
     #food {
         width: 100%;
@@ -878,13 +1076,9 @@ gap: 10px;
     .food-h1 {
         font-size: 20px;
     }
-
-
 }
 
-
 @media screen and (min-width:600px) and (max-width:949px) {
-
 
     #food {
         width: 100%;
@@ -901,7 +1095,7 @@ gap: 10px;
         margin-top: 20px;
     }
 
-    
+
 
     .food-img {
         width: 100%;
@@ -952,10 +1146,7 @@ gap: 10px;
     .food-h1 {
         font-size: 20px;
     }
-
-
 }
-
 
 @media screen and (min-width:415px) and (max-width:599px) {
 
@@ -1026,10 +1217,7 @@ gap: 10px;
     }
 }
 
-
 @media screen and (min-width:200px) and (max-width:414px) {
-
-
 
 
     .food-card {
@@ -1092,7 +1280,6 @@ gap: 10px;
 
 }
 
-
 @media screen and (min-width:200px) and (max-width:259px) {
 
     .food-pay {
@@ -1102,8 +1289,21 @@ gap: 10px;
     }
 }
 
+@media screen and (max-width:380px) {
 
+    .filter-basket input {
+        padding: 10px 15px;
+        flex-basis: 10%;
+        width: 150px;
+    }
+}
 
+@media screen and (max-width:290px) {
+
+    .filter-basket input {
+        display: none;
+    }
+}
 
 
 
@@ -1399,6 +1599,10 @@ gap: 10px;
     }
 
 }
+
+
+
+
 
 @media screen and (min-width:650px) and (max-width:880px) {
 

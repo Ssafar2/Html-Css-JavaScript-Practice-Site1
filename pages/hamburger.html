@@ -17,6 +17,31 @@
 <body>
 
 
+
+    <!-- MODAL SECTION-->
+
+
+
+    <div id="payModal">
+        <div class="payBox">
+            <div class="payHeader">
+                <h2>Ödəniş edilsin ?</h2>
+                <h3 id="closePayBox">X</h3>
+            </div>
+            <div class="payBody">
+                <p>Məbləğ:</p>
+                <p id="totalValue">0</p>
+                <p id="totalValue">₼</p>
+            </div>
+           <div class="order-button-div">
+            <button id="order" type="button">Ödəniş et</button>
+           </div>
+        </div>
+    </div>
+
+
+
+
     <div class="top-arrow">
         <a href="#header">
             <i class="fa-solid fa-angle-up"></i>
@@ -103,8 +128,6 @@
 
     <section id="food">
 
-
-
         <div class="filter-basket">
             <div id="basket-count" class="basket-count">0</div>
             <input type="text" name="search" id="search" placeholder="Axtarın">
@@ -117,26 +140,10 @@
                 <p id="close-basket-menu">X</p>
             </div>
 
-
-
-    <!-- <div class="basket-menu-body">
-        <img src="#">
-        <p class="basketMenuName"></p>
-        <p class="basketMenuCount"></p>
-        <div class="basketMenuPrice">
-            <p class="price"></p>
-            <p class="manat">₼</p>
-        </div>
-        
-        <i class="fa-solid fa-xmark"></i>
-    </div> -->
-
-
-
             <div class="total-price-body">
                 <div class="total">
                     <p>Toplam:</p>
-                    <p id="total-price">0</p>
+                    <p id="total-price">0 </p>
                     <p>₼</p>
                 </div>
 
@@ -144,6 +151,7 @@
                     <button id="pay-order" type="button">Sifariş et</button>
                     <button id="clearBasket" type="button">Təmizlə</button>
                 </div>
+
             </div>
         </div>
 
@@ -201,9 +209,169 @@
                 <button id="take-order" type="button">Sifariş et</button>
                 <button id="send-basket" type="button" name="1">Səbətə at</button>
             </div>
-
         </div>
 
+        <div class="food-card">
+            <div class="food-img">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
+            </div>
+
+            <div class="food-header">
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
+            </div>
+
+            <div class="food-price">
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
+                <span>₼</span>
+            </div>
+
+            <div class="food-count">
+                <div class="plus-counter">+</div>
+                <div id="menu-limit" class="menu-limit">1</div>
+                <div class="minus-counter">-</div>
+            </div>
+
+            <div class="food-pay">
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-img">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
+            </div>
+
+            <div class="food-header">
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
+            </div>
+
+            <div class="food-price">
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
+                <span>₼</span>
+            </div>
+
+            <div class="food-count">
+                <div class="plus-counter">+</div>
+                <div id="menu-limit" class="menu-limit">1</div>
+                <div class="minus-counter">-</div>
+            </div>
+
+            <div class="food-pay">
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-img">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
+            </div>
+
+            <div class="food-header">
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
+            </div>
+
+            <div class="food-price">
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
+                <span>₼</span>
+            </div>
+
+            <div class="food-count">
+                <div class="plus-counter">+</div>
+                <div id="menu-limit" class="menu-limit">1</div>
+                <div class="minus-counter">-</div>
+            </div>
+
+            <div class="food-pay">
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-img">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
+            </div>
+
+            <div class="food-header">
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
+            </div>
+
+            <div class="food-price">
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
+                <span>₼</span>
+            </div>
+
+            <div class="food-count">
+                <div class="plus-counter">+</div>
+                <div id="menu-limit" class="menu-limit">1</div>
+                <div class="minus-counter">-</div>
+            </div>
+
+            <div class="food-pay">
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-img">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
+            </div>
+
+            <div class="food-header">
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
+            </div>
+
+            <div class="food-price">
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
+                <span>₼</span>
+            </div>
+
+            <div class="food-count">
+                <div class="plus-counter">+</div>
+                <div id="menu-limit" class="menu-limit">1</div>
+                <div class="minus-counter">-</div>
+            </div>
+
+            <div class="food-pay">
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-img">
+                <img id="food-img" src="../image-menu/hamburger2.jpg" alt="hamburger2">
+            </div>
+
+            <div class="food-header">
+                <h1 id="food-h1" class="food-h1">Bufalo Burger</h1>
+            </div>
+
+            <div class="food-price">
+                <p><del>14.99 ₼</del></p>
+                <p id="active-price" class="active-price">9.99</p>
+                <span>₼</span>
+            </div>
+
+            <div class="food-count">
+                <div class="plus-counter">+</div>
+                <div id="menu-limit" class="menu-limit">1</div>
+                <div class="minus-counter">-</div>
+            </div>
+
+            <div class="food-pay">
+                <button id="take-order" type="button">Sifariş et</button>
+                <button id="send-basket" type="button" name="1">Səbətə at</button>
+            </div>
+        </div>
 
 
 

@@ -22,19 +22,17 @@ const basketCount = document.querySelector('#basket-count');
 const sendBasket = document.querySelectorAll('#send-basket');
 const closeBasketMenu = document.querySelector('#close-basket-menu');
 const basketMenu = document.querySelector('.basket-menu');
-// const basketMenuBody = document.querySelector('.basket-menu-body')
-// const basketMenuImg = document.querySelector('.basket-menu-body img');
-// const basketMenuName = document.querySelector('.basketMenuName');
-// const basketMenuCount = document.querySelector('.basketMenuCount');
-// const price = document.querySelector('.price');
-// const manat = document.querySelector('.manat');
-// const basketMenuPricePar = document.querySelector('.basketMenuPrice p');
-// const basketMenuPriceXmark = document.querySelector('.basket-menu-body i');
 const totalPrice = document.querySelector('#total-price');
 const totalPriceBody = document.querySelector('.total-price-body');
+
 const foodPayOrder = document.querySelectorAll('#take-order');
 const clearBasketMenu = document.querySelector('#clearBasket');
 const payOrder = document.querySelector('#pay-order');
+const payModal = document.querySelector('#payModal');
+const closePayBox = document.querySelector('#closePayBox');
+const totalValue = document.querySelector('#totalValue');
+const order = document.querySelector('#order')
+
 let activePriceArray = [];
 
 
@@ -140,6 +138,7 @@ window.onload = () => {
 
     totalPrice.textContent = localStorage.getItem('totalPrice');
     basketCount.textContent = localStorage.getItem('basketCount');
+    totalValue.textContent = localStorage.getItem('totalPrice');
 
     checkBasketPriceFromStorage();
     checkBasketMenuFromStorage();
@@ -167,9 +166,16 @@ window.onload = () => {
                 basketMenu.insertBefore(createBasketMenuBody, totalPriceBody);
 
                 clearBasketMenu.addEventListener('click', () => {
-                    
+
                     createBasketMenuBody.remove();
                 })
+
+                order.addEventListener('click', () => {
+
+                    totalPrice.textContent = 0;
+                    createBasketMenuBody.remove();
+                })
+
             }
         })
     })
@@ -222,7 +228,11 @@ const createBasketMenuUI = (hamb, limit, activePriceValue) => {
         createBasketMenuBody.remove();
     })
 
+    order.addEventListener('click', () => {
 
+        totalPrice.textContent = 0;
+        createBasketMenuBody.remove();
+    })
 
 }
 
@@ -252,21 +262,6 @@ clearBasketMenu.addEventListener('click', () => {
     basketCount.textContent = 0;
     localStorage.setItem('basketCount', basketCount.textContent);
 })
-
-
-
-
-
-
-//*****************************! PAY-ORDER SECTION  *************************/
-
-payOrder.addEventListener('click', () => {
-
-    if (totalPrice.textContent == 0) {
-        alert('Xəta! Sifariş etmək üçün səbətinizdə məhsul mövcud olmalıdır..');
-    }
-})
-
 
 
 
@@ -302,9 +297,46 @@ const checkBasketPriceFromStorage = () => {
 
 
 
+//*****************************! PAY-ORDER SECTION  *************************/
 
 
 
+payOrder.addEventListener('click', () => {
+
+    if (totalPrice.textContent == 0) {
+        alert('Xəta! Sifariş etmək üçün səbətinizdə məhsul mövcud olmalıdır..');
+    }
+    else {
+        payModal.style.display = 'flex';
+        basketMenu.style.right = '-400px';
+        totalValue.textContent = totalPrice.textContent;
+
+        order.addEventListener('click', () => {
+            alert('Ödəniş uğurla tamamlandı. Bizi seçdiyiniz üçün təşəkkürlər :)))')
+            payModal.style.display = 'none';
+
+            checkBasketMenuFromStorage();
+
+            checkedMenu = [];
+            localStorage.setItem('basketMenu', JSON.stringify(checkedMenu));
+
+            activePriceArray = [];
+            localStorage.setItem('activePrice', JSON.stringify(activePriceArray));
+
+            totalPrice.textContent = 0;
+            localStorage.setItem('totalPrice', totalPrice.textContent)
+
+
+            basketCount.textContent = 0;
+            localStorage.setItem('basketCount', basketCount.textContent);
+        })
+    }
+})
+
+
+closePayBox.addEventListener('click', () => {
+    payModal.style.display = 'none'
+})
 
 
 
@@ -337,12 +369,12 @@ var swiper = new Swiper(".mySwiper", {
 basketMenu.style.right = '-400px'
 closeBasketMenu.onclick = () => {
     basketMenu.style.right = '-400px';
-    basketMenu.style.transition = '1s';
+    basketMenu.style.transition = '.7s';
 }
 
 basket.onclick = () => {
     basketMenu.style.right = '0';
-    basketMenu.style.transition = '1s';
+    basketMenu.style.transition = '.7s';
 }
 
 
