@@ -42,66 +42,66 @@ const search = document.querySelector('#search');
 let activePriceArray = [];
 
 
-const hamburgerMenu = [
+
+
+const pizzaMenu = [
     {
-        title: 'Angus Burger',
-        priceDel: '12.99 ₼',
-        content: 8.99,
-        image: '../image-menu/hamburger1.jpg',
-        count: 1,
+        title: 'White Pizza',
+        priceDel: '18.99 ₼',
+        content: '16.99',
+        image: '../image-menu/pizza1.jpg',
+        count:1,
     },
     {
-        title: 'Bufalo Burger',
-        priceDel: '14.99 ₼',
-        content: 9.99,
-        image: '../image-menu/hamburger2.jpg',
-        count: 1,
+        title: 'Supreme Pizza',
+        priceDel: '19.99 ₼',
+        content: '17.99',
+        image: '../image-menu/pizza2.jpg',
+        count:1,
     },
     {
-        title: 'Cheesburger',
-        priceDel: '6.99 ₼',
-        content: 4.99,
-        image: '../image-menu/hamburger3.jpg',
-        count: 1,
+        title: 'Margherita Pizza',
+        priceDel: '22.99 ₼',
+        content: '18.99',
+        image: '../image-menu/pizza3.jpg',
+        count:1,
     },
     {
-        title: 'Veggie Burger',
-        priceDel: '7.99 ₼',
-        content: 6.99,
-        image: '../image-menu/hamburger4.jpg',
-        count: 1,
+        title: 'Gennaro Pizza',
+        priceDel: '25.99 ₼',
+        content: '21.99',
+        image: '../image-menu/pizza4.jpg',
+        count:1,
     },
     {
-        title: 'Bean Burger',
-        priceDel: '10.99 ₼',
-        content: 8.99,
-        image: '../image-menu/hamburger5.jpg',
-        count: 1,
+        title: 'Pepperoni Pizza',
+        priceDel: '22.99 ₼',
+        content: '19.99',
+        image: '../image-menu/pizza5.jpg',
+        count:1,
     },
     {
-        title: 'Chicken Burger',
-        priceDel: '7.99 ₼',
-        content: 4.99,
-        image: '../image-menu/hamburger6.jpg',
-        count: 1,
+        title: 'Veggie Pizza',
+        priceDel: '28.99 ₼',
+        content: '23.99',
+        image: '../image-menu/pizza6.jpg',
+        count:1,
     },
     {
-        title: 'Crispy Fish Burger',
-        priceDel: '14.99 ₼',
-        content: 11.99,
-        image: '../image-menu/hamburger7.jpg',
-        count: 1,
+        title: 'Portofino Pizza',
+        priceDel: '30.99 ₼',
+        content: '25.99',
+        image: '../image-menu/pizza7.jpg',
+        count:1,
     },
     {
-        title: 'Double Burger',
-        priceDel: '16.99 ₼',
-        content: 10.99,
-        image: '../image-menu/hamburger8.webp',
-        count: 1,
+        title: 'Cheese Pizza',
+        priceDel: '23.99 ₼',
+        content: '20.99',
+        image: '../image-menu/pizza8.jpg',
+        count:1,
     }
 ]
-
-
 
 
 
@@ -129,7 +129,7 @@ search.addEventListener('keyup', e => {
 
 sendBasket.forEach((send, sendIndex) => {
 
-    hamburgerMenu.forEach((hamb, hambIndex) => {
+    pizzaMenu.forEach((hamb, hambIndex) => {
 
         send.addEventListener('click', () => {
 
@@ -432,31 +432,31 @@ basket.onclick = () => {
 //*****************************! CARD INFORMATION  *************************/
 
 foodH1.forEach((value, index) => {
-    hamburgerMenu.map((val, ind) => {
+    pizzaMenu.map((val, ind) => {
         index === ind ? value.textContent = val.title : value.textContent;
     })
 })
 
 foodDel.forEach((value, index) => {
-    hamburgerMenu.map((val, ind) => {
+    pizzaMenu.map((val, ind) => {
         index === ind ? value.textContent = val.priceDel : value.textContent
     })
 })
 
 activePrice.forEach((value, index) => {
-    hamburgerMenu.map((val, ind) => {
+    pizzaMenu.map((val, ind) => {
         index === ind ? value.textContent = val.content : value.textContent
     })
 })
 
 foodImg.forEach((value, index) => {
-    hamburgerMenu.map((val, ind) => {
+    pizzaMenu.map((val, ind) => {
         index === ind ? value.setAttribute('src', val.image) : value.getAttribute('src')
     })
 })
 
 menuLimit.forEach((value, index) => {
-    hamburgerMenu.map((val, ind) => {
+    pizzaMenu.map((val, ind) => {
         index === ind ? value.textContent = val.count : value.textContent
     })
 })
@@ -471,7 +471,7 @@ plusCounter.forEach((plus, plusIndex) => {
     plus.addEventListener('click', () => {
         activePrice.forEach((activePrice, activePriceIndex) => {
             if (plusIndex === activePriceIndex) {
-                hamburgerMenu.forEach((hamb, hambIndex) => {
+                pizzaMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
@@ -505,7 +505,7 @@ minusCounter.forEach((minus, minusIndex) => {
     minus.addEventListener('click', () => {
         activePrice.forEach((activePrice, activePriceIndex) => {
             if (minusIndex === activePriceIndex) {
-                hamburgerMenu.forEach((hamb, hambIndex) => {
+                pizzaMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
@@ -529,33 +529,6 @@ minusCounter.forEach((minus, minusIndex) => {
         })
     })
 })
-
-
-
-// minusCounter.forEach((minus, minusIndex) => {
-//     minus.addEventListener('click', () => {
-//         activePrice.forEach((activePrice, activePriceIndex) => {
-//             if (minusIndex === activePriceIndex) {
-//                 hamburgerMenu.forEach((hamb, hambIndex) => {
-//                     if (activePriceIndex === hambIndex) {
-//                         menuLimit.forEach((limit, limitIndex) => {
-//                             if (hambIndex === limitIndex) {
-//                                 if (limit.textContent > 1) {
-//                                     limit.textContent = +limit.textContent - 1
-//                                     let activePriceNum = +activePrice.textContent - +hamb.content;
-//                                     activePrice.textContent = +activePriceNum.toFixed(3);
-//                                 }
-//                             }
-//                         })
-//                     }
-//                 })
-//             }
-//         })
-//     })
-// })
-
-
-
 
 
 
