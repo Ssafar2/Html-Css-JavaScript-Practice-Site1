@@ -966,29 +966,35 @@ body {
 
 @media screen and (min-width:200px) and (max-width:319px) {
 
-    .payBox,.payBox2 {
+    .payBox,
+    .payBox2 {
         width: 80%;
         height: 34%;
     }
 
-    .payHeader h2,.payHeader2 h2{
+    .payHeader h2,
+    .payHeader2 h2 {
         font-size: 15px;
     }
 
-    .payHeader h3,.payHeader2 h3 {
+    .payHeader h3,
+    .payHeader2 h3 {
         font-size: 15px;
     }
 
-    .payBody p:first-child,.payBody2 p:first-child {
+    .payBody p:first-child,
+    .payBody2 p:first-child {
         font-size: 13px;
     }
 
-    .payBody p:nth-child(2),.payBody2 p:nth-child(2)
-    .payBody p:nth-child(3),.payBody2 p:nth-child(3) {
+    .payBody p:nth-child(2),
+    .payBody2 p:nth-child(2) .payBody p:nth-child(3),
+    .payBody2 p:nth-child(3) {
         font-size: 13px;
     }
 
-    #order,#order2 {
+    #order,
+    #order2 {
 
         padding: 6px 10px;
         font-size: 13px;
@@ -2273,4 +2279,124 @@ body {
         font-size: 18px;
         color: #ffecd1;
     }
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:300px) and (max-width:399px) {
+
+
+    .basket-menu {
+        width: 300px;
+    }
+
+    .basket-menu-header {
+        padding: 15px;
+    }
+
+
+    #close-basket-menu {
+        font-size: 30px;
+    }
+
+    .basket-menu-header h3 {
+        font-size: 25px;
+    }
+
+    .basket-menu-body {
+        padding: 15px;
+    }
+
+    .basketMenuCount{
+        font-size: 12px;
+    }
+
+    .basket-menu-body img {
+        flex-basis: 15%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .basket-menu-body .basketMenuName {
+        flex-basis: 30%;
+        font-size: 12px;
+    }
+
+    .basket-menu-body .basketMenuPrice {
+        flex-basis: 20%;
+        font-size: 12px;
+    }
+
+    .total {
+        font-size: 15px;
+    }
+
+    .total-price-body button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+
+}
+
+
+@media screen and (min-width:200px) and (max-width:299px) {
+
+
+    .basket-menu {
+        width: 220px;
+    }
+
+    .basket-menu-header {
+        padding: 15px;
+    }
+
+
+    #close-basket-menu {
+        font-size: 30px;
+    }
+
+    .basket-menu-header h3 {
+        font-size: 25px;
+    }
+
+    .basket-menu-body {
+        padding: 5px;
+    }
+
+    .basketMenuCount{
+        font-size: 12px;
+    }
+
+    .basket-menu-body img {
+        flex-basis: 15%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .basket-menu-body .basketMenuName {
+        flex-basis: 30%;
+        font-size: 12px;
+    }
+
+    .basket-menu-body .basketMenuPrice {
+        flex-basis: 20%;
+        font-size: 12px;
+    }
+
+    .total {
+        font-size: 15px;
+    }
+
+    .total-price-body button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+
 }
