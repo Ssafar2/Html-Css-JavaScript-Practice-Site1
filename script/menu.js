@@ -401,21 +401,6 @@ modalImgs(juiceImgs, juiceMenu, menuImgModal6);
 
 
 
-pizzaImgs.forEach((val,ind)=>{
-    val.addEventListener('click',()=>{
-        pizzaMenu.map((value,index)=>{
-
-            if(ind===index){
-              menuImgModal.querySelector('a').addEventListener('click',()=>{
-                window.open(`../pages/hamburger.html`)
-              })
-            }
-        })        
-    })
-})
-
-
-
 const closeImgModal = (menuImg) => {
     menuImg.style.display = 'none';
 }
