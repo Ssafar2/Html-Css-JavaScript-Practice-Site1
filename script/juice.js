@@ -46,64 +46,63 @@ let activePriceArray = [];
 
 
 
+const juiceMenu = [
 
-
-const saladMenu = [
     {
-        title: 'Çoban Salatı',
-        priceDel: '4.99 ₼',
-        content: 3.99,
-        image: '../image-menu/salad1.webp',
-        count:1,
+        title: 'Fanta',
+        priceDel: '3.99 ₼',
+        content: 2.99,
+        image: '../image-menu/drinks9.jpg',
+        count: 1,
     },
     {
-        title: 'İtalyan Salatı',
-        priceDel: '13.99 ₼',
-        content: 12.99,
-        image: '../image-menu/salad2.webp',
-        count:1,
+        title: 'Kola',
+        priceDel: '3.99 ₼',
+        content: 2.99,
+        image: '../image-menu/drinks10.webp',
+        count: 1,
     },
     {
-        title: 'Mimoza Salatı',
+        title: 'Sprite',
+        priceDel: '3.99 ₼',
+        content: 2.99,
+        image: '../image-menu/drinks11.jpg',
+        count: 1,
+    },
+    {
+        title: 'Pepsi',
+        priceDel: '3.99 ₼',
+        content: 2.99,
+        image: '../image-menu/drinks12.webp',
+        count: 1,
+    },
+    {
+        title: 'Portağal Şirəsi',
         priceDel: '5.99 ₼',
         content: 4.99,
-        image: '../image-menu/salad3.jpg',
-        count:1,
+        image: '../image-menu/drinks13.jpg',
+        count: 1,
     },
     {
-        title: 'Sezar Salatı',
-        priceDel: '14.99 ₼',
-        content: 12.99,
-        image: '../image-menu/salad4.jpg',
-        count:1,
-    },
-    {
-        title: 'Toyuq Salatı',
-        priceDel: '7.99 ₼',
-        content: 6.99,
-        image: '../image-menu/salad5.jpg',
-        count:1,
-    },
-    {
-        title: 'Göbələk Salatı',
-        priceDel: '13.99 ₼',
-        content: 9.99,
-        image: '../image-menu/salad6.jpg',
-        count:1,
-    },
-    {
-        title: 'Avakado Salatı',
-        priceDel: '21.99 ₼',
-        content: 16.99,
-        image: '../image-menu/salad7.jpg',
-        count:1,
-    },
-    {
-        title: 'Yumurta Salatı',
-        priceDel: '7.99 ₼',
+        title: 'Alma Şirəsi',
+        priceDel: '5.99 ₼',
         content: 4.99,
-        image: '../image-menu/salad8.jpg',
-        count:1,
+        image: '../image-menu/drinks14.jpg',
+        count: 1,
+    },
+    {
+        title: 'Ananas Şirəsi',
+        priceDel: '8.99 ₼',
+        content: 6.99,
+        image: '../image-menu/drinks15.jpg',
+        count: 1,
+    },
+    {
+        title: 'Albalı Şirəsi',
+        priceDel: '5.99 ₼',
+        content: 4.99,
+        image: '../image-menu/drinks16.jpg',
+        count: 1,
     }
 ]
 
@@ -132,7 +131,7 @@ search.addEventListener('keyup', e => {
 
 sendBasket.forEach((send, sendIndex) => {
 
-    saladMenu.forEach((hamb, hambIndex) => {
+    juiceMenu.forEach((hamb, hambIndex) => {
 
         send.addEventListener('click', () => {
 
@@ -435,31 +434,31 @@ basket.onclick = () => {
 //*****************************! CARD INFORMATION  *************************/
 
 foodH1.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    juiceMenu.map((val, ind) => {
         index === ind ? value.textContent = val.title : value.textContent;
     })
 })
 
 foodDel.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    juiceMenu.map((val, ind) => {
         index === ind ? value.textContent = val.priceDel : value.textContent
     })
 })
 
 activePrice.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    juiceMenu.map((val, ind) => {
         index === ind ? value.textContent = val.content : value.textContent
     })
 })
 
 foodImg.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    juiceMenu.map((val, ind) => {
         index === ind ? value.setAttribute('src', val.image) : value.getAttribute('src')
     })
 })
 
 menuLimit.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    juiceMenu.map((val, ind) => {
         index === ind ? value.textContent = val.count : value.textContent
     })
 })
@@ -474,7 +473,7 @@ plusCounter.forEach((plus, plusIndex) => {
     plus.addEventListener('click', () => {
         activePrice.forEach((activePrice, activePriceIndex) => {
             if (plusIndex === activePriceIndex) {
-                saladMenu.forEach((hamb, hambIndex) => {
+                juiceMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
@@ -508,7 +507,7 @@ minusCounter.forEach((minus, minusIndex) => {
     minus.addEventListener('click', () => {
         activePrice.forEach((activePrice, activePriceIndex) => {
             if (minusIndex === activePriceIndex) {
-                saladMenu.forEach((hamb, hambIndex) => {
+                juiceMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {

@@ -45,64 +45,61 @@ let activePriceArray = [];
 
 
 
-
-
-
-const saladMenu = [
+const sandwichMenu = [
     {
-        title: 'Çoban Salatı',
-        priceDel: '4.99 ₼',
-        content: 3.99,
-        image: '../image-menu/salad1.webp',
-        count:1,
-    },
-    {
-        title: 'İtalyan Salatı',
+        title: 'Grilled Sandwich',
         priceDel: '13.99 ₼',
-        content: 12.99,
-        image: '../image-menu/salad2.webp',
+        content: 11.99,
+        image: '../image-menu/sandwich1.webp',
         count:1,
     },
     {
-        title: 'Mimoza Salatı',
-        priceDel: '5.99 ₼',
-        content: 4.99,
-        image: '../image-menu/salad3.jpg',
+        title: 'Panini Sandwich',
+        priceDel: '17.99 ₼',
+        content: 14.99,
+        image: '../image-menu/sandwich2.webp',
         count:1,
     },
     {
-        title: 'Sezar Salatı',
-        priceDel: '14.99 ₼',
-        content: 12.99,
-        image: '../image-menu/salad4.jpg',
+        title: 'Caprese Sandwich',
+        priceDel: '17.99 ₼',
+        content: 15.99,
+        image: '../image-menu/sandwich3.jpg',
         count:1,
     },
     {
-        title: 'Toyuq Salatı',
-        priceDel: '7.99 ₼',
-        content: 6.99,
-        image: '../image-menu/salad5.jpg',
-        count:1,
-    },
-    {
-        title: 'Göbələk Salatı',
-        priceDel: '13.99 ₼',
+        title: 'Chicken Sandwich',
+        priceDel: '12.99 ₼',
         content: 9.99,
-        image: '../image-menu/salad6.jpg',
+        image: '../image-menu/sandwich4.jpg',
         count:1,
     },
     {
-        title: 'Avakado Salatı',
-        priceDel: '21.99 ₼',
-        content: 16.99,
-        image: '../image-menu/salad7.jpg',
+        title: 'Club Sandwich',
+        priceDel: '8.99 ₼',
+        content: 7.99,
+        image: '../image-menu/sandwich5.jpg',
         count:1,
     },
     {
-        title: 'Yumurta Salatı',
-        priceDel: '7.99 ₼',
-        content: 4.99,
-        image: '../image-menu/salad8.jpg',
+        title: 'Montreal Sandwich',
+        priceDel: '17.99 ₼',
+        content: 15.99,
+        image: '../image-menu/sandwich6.jpg',
+        count:1,
+    },
+    {
+        title: `Schwartz's Sandwich`,
+        priceDel: '20.99 ₼',
+        content: 17.99,
+        image: '../image-menu/sandwich7.jpg',
+        count:1,
+    },
+    {
+        title: 'Mortadella Sandwich',
+        priceDel: '16.99 ₼',
+        content: 13.99,
+        image: '../image-menu/sandwich8.jpg',
         count:1,
     }
 ]
@@ -132,7 +129,7 @@ search.addEventListener('keyup', e => {
 
 sendBasket.forEach((send, sendIndex) => {
 
-    saladMenu.forEach((hamb, hambIndex) => {
+    sandwichMenu.forEach((hamb, hambIndex) => {
 
         send.addEventListener('click', () => {
 
@@ -435,31 +432,31 @@ basket.onclick = () => {
 //*****************************! CARD INFORMATION  *************************/
 
 foodH1.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    sandwichMenu.map((val, ind) => {
         index === ind ? value.textContent = val.title : value.textContent;
     })
 })
 
 foodDel.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    sandwichMenu.map((val, ind) => {
         index === ind ? value.textContent = val.priceDel : value.textContent
     })
 })
 
 activePrice.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    sandwichMenu.map((val, ind) => {
         index === ind ? value.textContent = val.content : value.textContent
     })
 })
 
 foodImg.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    sandwichMenu.map((val, ind) => {
         index === ind ? value.setAttribute('src', val.image) : value.getAttribute('src')
     })
 })
 
 menuLimit.forEach((value, index) => {
-    saladMenu.map((val, ind) => {
+    sandwichMenu.map((val, ind) => {
         index === ind ? value.textContent = val.count : value.textContent
     })
 })
@@ -474,7 +471,7 @@ plusCounter.forEach((plus, plusIndex) => {
     plus.addEventListener('click', () => {
         activePrice.forEach((activePrice, activePriceIndex) => {
             if (plusIndex === activePriceIndex) {
-                saladMenu.forEach((hamb, hambIndex) => {
+                sandwichMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
@@ -508,7 +505,7 @@ minusCounter.forEach((minus, minusIndex) => {
     minus.addEventListener('click', () => {
         activePrice.forEach((activePrice, activePriceIndex) => {
             if (minusIndex === activePriceIndex) {
-                saladMenu.forEach((hamb, hambIndex) => {
+                sandwichMenu.forEach((hamb, hambIndex) => {
                     if (activePriceIndex === hambIndex) {
                         menuLimit.forEach((limit, limitIndex) => {
                             if (hambIndex === limitIndex) {
