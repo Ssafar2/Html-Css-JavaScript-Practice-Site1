@@ -173,53 +173,6 @@ textArea.addEventListener('input', () => {
 })
 
 
-let contactUs = {
-    origin: 'left',
-    distance: '25rem',
-    delay: 300,
-    duration: 1000
-}
-
-let jobForm = {
-    origin: 'bottom',
-    distance: '25rem',
-    delay: 300,
-    duration: 1000
-}
-
-ScrollReveal().reveal('.contact-us', contactUs);
-ScrollReveal().reveal('.job-form', jobForm);
-
-
-
-
-let footerLogo = {
-    origin: 'top',
-    distance: '25rem',
-    delay: 500,
-    duration: 1000
-}
-
-let footerContact = {
-    origin: 'bottom',
-    distance: '25rem',
-    delay: 1000,
-    duration: 1000
-}
-
-let footerSubscribe = {
-    origin: 'top',
-    distance: '25rem',
-    delay: 500,
-    duration: 1000
-}
-
-ScrollReveal().reveal('.footer-logo', footerLogo);
-ScrollReveal().reveal('.footer-contact', footerContact);
-ScrollReveal().reveal('.footer-subscribe', footerSubscribe);
-
-
-
 
 window.addEventListener('scroll', () => {
     let winScrollY = window.scrollY;

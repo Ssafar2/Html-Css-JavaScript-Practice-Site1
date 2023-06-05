@@ -67,90 +67,12 @@ faSun.onclick = () => {
 }
 
 if (localStorage.getItem('light')==='') {
-    // docBody.classList.add(localStorage.getItem('light'))
     faSun.classList.replace('fa-moon','fa-sun')
 }
 else {
     docBody.classList.add(localStorage.getItem('light'))
     faSun.classList.add('fa-moon')
 }
-
-
-
-let footerLogo={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
-}
-
-let footerContact={
-    origin:'bottom',
-    distance:'25rem',
-    delay:1000,
-    duration:1000
-}
-
-let footerSubscribe={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
-}
-
-ScrollReveal().reveal('.footer-logo',footerLogo);
-ScrollReveal().reveal('.footer-contact',footerContact);
-ScrollReveal().reveal('.footer-subscribe',footerSubscribe);
-
-
-
-
-let worker1={
-    origin:'top',
-    distance:'25rem',
-    delay:500,
-    duration:1000
-}
-
-let worker2={
-    origin:'top',
-    distance:'25rem',
-    delay:1000,
-    duration:1000
-}
-
-let worker3={
-    origin:'top',
-    distance:'25rem',
-    delay:1500,
-    duration:1000
-}
-
-let worker4={
-    origin:'top',
-    distance:'25rem',
-    delay:2000,
-    duration:1000
-}
-
-
-ScrollReveal().reveal('.worker1',worker1);
-ScrollReveal().reveal('.worker2',worker2);
-ScrollReveal().reveal('.worker3',worker3);
-ScrollReveal().reveal('.worker4',worker4);
-
-
-
-
-let aboutManager={
-    origin:'top',
-    distance:'25rem',
-    delay:2000,
-    duration:1000
-}
-
-
-ScrollReveal().reveal('.about-manager',aboutManager);
 
 
 
